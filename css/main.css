@@ -1,0 +1,47 @@
+﻿.payments-table-cards{
+    width:100%;
+}
+
+    .payments-table-cards th, .payments-table-cards td {
+        text-align: center;
+    }
+
+.payments-table-cards .column-card {
+    width: 25%;
+}
+
+.payments-table-cards .column-numbercard {
+    width: 50%;
+}
+
+.payments-table-cards .column-action {
+    width: 25%;
+}
+
+.payments-table-cards .glyphicon glyphicon-trash {
+    color: red;
+}
+
+.payments-table-cards .payments-row-card .payments-card-img {
+    width: 40px;
+}
+
+.btn-add-vault {
+    display:inline-block;
+    float:right;
+    margin-top:24px
+}
+
+#create-card-modal .modal-dialog {
+    transform: translate(0,-50%);
+    width: 384px;
+    top: 50%;
+}
+#create-card-modal .modal-content {
+    padding: 0 23px;
+}
+
+img.card-icon {
+    height: 21px;
+    width: 43px;
+}

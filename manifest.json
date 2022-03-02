@@ -1,0 +1,33 @@
+{
+  "name": "Uepa Tickets Demo",
+  "short_name": "Demo",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "description": "Tu entrada a los grandes eventos...",
+  "icons": [
+    {
+      "src": "https://uepatickets.com/images/UEPA_Favicon_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://uepatickets.com/images/UEPA_Favicon_180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=uepa.id",
+      "id": "uepa.id"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://itunes.apple.com/app/uepatickets/id1449875786"
+    }
+  ]
+}
