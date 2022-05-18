@@ -7915,7 +7915,7 @@
     <span style="font-size: 12px;">Este es el detalle de su pedido.</span>
     </div>
     <div class="panel-body" style="padding: 6px;">
-    <div class="list-group">
+    <div class="list-group mb-2">
     <div class="list-group-item" id="divRevision">
     <div>
     </div>
@@ -8089,8 +8089,8 @@
 
     <br/>
 
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#modalCuotas">Pagar en cuotas</button>
+    <!-- Button trigger modal Pagar en cuotas 
+<button type="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#modalCuotas">Pagar en cuotas</button> -->
   
   <!-- Modal Cuotas -->
   <div class="modal modal-blur fade" id="modalCuotas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -8100,9 +8100,9 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="myModalLabel">Pagar en cuotas</h4>
 
-          <div class="alert alert-success mb-1 mt-1" role="alert">
+        <!--  <div class="alert alert-success mb-1 mt-1" role="alert">
             <p><b>Uepa Cuotas</b> ofrece a nuestros clientes preferenciales financiar sus tickets, permitiéndoles pagar en cómodas cuotas.</p>
-          </div>
+          </div>-->
 
         </div>
         <div class="modal-body">
@@ -8111,7 +8111,7 @@
 
 
             <div class="row">
-                <div class="col-md-6 col-sm-12 product_img">
+                <div class="col-md-6 col-sm-12 hidden-xs hidden-sm product_img">
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgp8YdBlFZsFPNBBv9oCwXJKM1xvPOk_Trs6danwA8bvl5sxrD3IQ96tXiLcEnLGGonYagV_LE7bC8UmtnyEm5rWo_tE21uFtut9xykvEzVDyQfa_mWGHsWThVgA_Jb9HfdOfq3kg4-gDHD5lAa9GvcZ3Vvm9fo9aGa5MYbsPYpia2IC7kiFf0n8LsdNQ/s1600/test-event.jpeg" class="img-responsive">
                 </div>
                 <div class="col-md-6 col-sm-12 product_content">
@@ -8198,8 +8198,18 @@
 
 
     </div>
-    </div>
-    </div>
+    </div><!--list-group-->
+
+
+    <div class="alert alert-success mb-1 mt-1" role="alert">
+        <p><b>Uepa Cuotas</b> ofrece a nuestros clientes preferenciales financiar sus tickets, permitiéndoles pagar en cómodas cuotas.</p>
+        <br/>
+        <button type="button" class="btn btn-success btn-sm btn-block" data-toggle="modal" data-target="#modalCuotas">Pagar en cuotas</button>
+
+      </div>
+
+
+    </div><!--panel-body-->
     <div class="panel-footer">
     <div class="row">
     <div class="col-md-8 col-xs-9">
