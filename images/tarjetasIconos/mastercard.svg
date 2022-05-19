@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="mastercard_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 524 341" style="enable-background:new 0 0 524 341;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EEEEEE;}
+	.st1{fill:#E20D17;}
+	.st2{fill:#EA610A;}
+	.st3{fill:#F59E00;}
+</style>
+<path id="outline" class="st0" d="M500,9.5H24c-6.6,0-12,5.4-12,12v298c0,6.6,5.4,12,12,12h476c6.6,0,12-5.4,12-12v-298
+	C512,14.9,506.6,9.5,500,9.5z M502,309.5c0,6.6-5.4,12-12,12H34c-6.6,0-12-5.4-12-12v-278c0-6.6,5.4-12,12-12h456
+	c6.6,0,12,5.4,12,12V309.5z"/>
+<g id="logo">
+	<g>
+		<g>
+			<path class="st1" d="M217.4,170.5c0-37.2,17.4-70.3,44.4-91.8c-20-15.8-45.2-25.3-72.6-25.3c-64.6,0-117,52.4-117,117
+				s52.4,117,117,117c27.4,0,52.6-9.5,72.6-25.3C234.7,240.8,217.4,207.7,217.4,170.5z"/>
+			<ellipse class="st2" cx="261.8" cy="170.5" rx="44.4" ry="91.8"/>
+			<path class="st3" d="M443.5,233.8v-3.4h-1.4v-0.9h3.8v0.9h-1.4v3.4H443.5z M450.8,233.8v-3l-1,2.6h-1.1l-1-2.6v3h-1v-4.4h1.5
+				l1.1,2.8l1.1-2.8h1.5v4.4H450.8z"/>
+			<path class="st3" d="M334.4,53.5c-27.4,0-52.6,9.5-72.6,25.3c27.1,21.4,44.4,54.6,44.4,91.8s-17.4,70.3-44.4,91.8
+				c20,15.8,45.2,25.3,72.6,25.3c64.6,0,117-52.4,117-117S399,53.5,334.4,53.5z"/>
+		</g>
+	</g>
+</g>
+</svg>

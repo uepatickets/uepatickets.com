@@ -8172,16 +8172,16 @@
                         </div>--> 
                         <div class="col-md-12 col-sm-12">
                             <span class="small">Orden total</span>
-                            <h3 class="cost mt-1">RD$ 900.00</h3>
+                            <h3 class="cost mt-1">RD$ 720.00</h3>
                         </div>
                         <!-- end col -->
                         <div class="col-md-12 col-sm-12">
-                            <select class="form-control" name="select">
-                            <!-- <option value="" selected="">Seleccionar Cuotas</option>
+                           <!-- <select class="form-control" name="select">
+                             <option value="" selected="">Seleccionar Cuotas</option>
                                 <option value="2">2 cuotas de RD$450.00</option>
-                                <option value="3">3 cuotas de RD$300.00</option>--> 
+                                <option value="3">3 cuotas de RD$300.00</option> 
                                 <option value="4">4 cuotas de RD$225.00</option>
-                            </select>
+                            </select>-->
                             <hr/>
                             <div id="cuotasTerminos" class="">
     
@@ -8195,7 +8195,7 @@
                                     </td>
                                     <td>
                                     <label class="aceptar" style="color: rgb(240, 79, 47); margin-top: 6px; margin-left: 45px;">
-                                    <button type="button" class="btn-link" data-toggle="modal" data-target="#myModalCuotas"><span class="hidden-sm">Aceptar </span>Términos y Condiciones</button>
+                                    <a class="btn-link" href="../legal.html" target="_blank"><span class="hidden-sm">Aceptar </span>Términos y Condiciones</a>
                                     </label>
                                     </td>
                                     </tr>
@@ -8271,190 +8271,248 @@
     </div>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12">
-    <div class="panel panel-default with-nav-tabs" style="margin-bottom: 18px;">
-    <div class="panel-heading">
-    <div style="height:27px;">
-    <span class="panel-title h3">Métodos de Pago</span>
-    <br>
-    </div>
-    <ul class="nav nav-tabs">
-    <li id="liBPDPayment" class="" style="display: none;">
-    <a href="#tab2default" data-toggle="tab">
-    <span class="panel-title"><i class="glyphicon glyphicon-credit-card"></i> Mis Tarjetas</span>
-    </a>
-    </li>
-    <li id="liDefaultPayment" class="active">
-    <a href="#tab1default" data-toggle="tab">
-    <span class="panel-title" id="imgDefaultPayment"><i class="glyphicon glyphicon-credit-card"></i> Agregar Tarjeta</span>
-    
-    </a>
-    </li>
-    </ul>
-    </div>
-    <div class="panel-body" style="padding: 6px;">
-    <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
-    <div class="tab-content">
-    <div class="tab-pane fade in " id="tab1default" style="display: block;">
-    <div class="list-group" id="formularioTarjeta" style="display: block;">
-    <div class="list-group-item">
-    <div class="row">
-    <div class="col-md-12 col-xs-12">
-    <label for="CredictCardOwner" style="text-transform: uppercase">NOMBRE PROPIETARIO DE LA TARJETA</label>
-    <div class="input-group" style="margin-bottom: 9px;">
-    <span class="input-group-addon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path opacity=".3" d="M12 16c-2.69 0-5.77 1.28-6 2h12c-.2-.71-3.3-2-6-2z"></path><circle opacity=".3" cx="12" cy="8" r="2"></circle><path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-6 4c.22-.72 3.31-2 6-2 2.7 0 5.8 1.29 6 2H6zm6-6c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"></path></svg></span>
-    <input type="text" autocomplete="off" required="" autofocus="" style="text-transform: uppercase" placeholder="" name="txtCredictCardOwner" min="1" maxlength="30" id="ContentPlaceHolder1_txtCardHolder" class="form-control">
-    </div>
-    </div>
-    <div class="col-md-12 col-xs-12">
-    <label for="ContentPlaceHolder1_txtCreditCard">NÚMERO DE TARJETA</label>
-    <div class="input-group" style="margin-bottom: 9px;">
-    <span class="input-group-addon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path opacity=".3" d="M4 12h16v6H4zm0-6h16v2H4z"></path><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"></path></svg></span>
-    <input type="number" autocomplete="cc-number" required="" autofocus="" style="text-transform: uppercase" placeholder="" name="ContentPlaceHolder1_txtCreditCard" min="16" maxlength="16" id="ContentPlaceHolder1_txtCreditCard" class="form-control">
-    </div>
-    </div>
-    <div class="col-md-8 col-xs-8">
-    <label for="cardExpiry"><span class="hidden-sm">FECHA</span><span class="visible-xs-inline"></span> DE EXPIRACIÓN</label>
-    <div class="input-group">
-    <span class="input-group-addon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path opacity=".3" d="M5 8h14V6H5z"></path><path d="M7 11h2v2H7zm12-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-4 3h2v2h-2zm-4 0h2v2h-2z"></path></svg></span>
-    <input required="" autocomplete="cc-exp" name="ctl00$ContentPlaceHolder1$txtFhExpiration" data-date-format="mmyy" placeholder="MMYY" type="Tel" min="4" max="7" maxlength="7" id="ContentPlaceHolder1_txtFhExpiration" class="form-control">
-    </div>
-    </div>
-    <div class="col-md-4 col-xs-4">
-    <label for="cardCVC">CVV <span class="visible-md-inline hidden-sm">CODE</span></label>
-    <input required="" placeholder="" autocomplete="cc-csc" name="ctl00$ContentPlaceHolder1$txtCVV" type="number" min="3" max="4" maxlength="4" id="ContentPlaceHolder1_txtCVV" class="form-control">
-    </div>
-    </div>
-    </div>
-    <div class="list-group-item" style="">
-    <div id="dTerminos" class="" style="">
-    
-    <table>
-    <tbody><tr>
-    <td>
-    <div class="material-switch pull-right" style="margin-left: 6px;">
-    <input id="ContentPlaceHolder1_cbox1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbox1">
-    <label for="ContentPlaceHolder1_cbox1" class="label-success"></label>
-    </div>
-    </td>
-    <td>
-    <label class="aceptar" style="color: rgb(240, 79, 47); margin-top: 6px; margin-left: 45px;">
-    <button type="button" class="btn-link" data-toggle="modal" data-target="#myModalATC"><span class="hidden-sm">Aceptar </span>Términos y Condiciones</button>
-    </label>
-    </td>
-    </tr>
-    </tbody></table>
-    
+   
+        <div class="panel panel-default with-nav-tabs" style="margin-bottom: 18px;">
+            <div class="panel-heading">
+
+                
+                <div style="height:27px;">
+                    <span class="panel-title h3">Métodos de Pago</span>
+                    <br>
+                    
+                </div>
+
+               
+                  <ul class="nav nav-tabs">
+                    <li id="liBPDPayment" class="active">
+                        <a href="#tab2default" data-toggle="tab" aria-expanded="true">
+                            <span class="panel-title"><i class="glyphicon glyphicon-credit-card"></i> Mis Tarjetas</span>
+                        </a>
+                    </li>
+                    <li id="liDefaultPayment" class="">
+                        <a href="#tab1default" data-toggle="tab" aria-expanded="false">
+                                <span class="panel-title" id="imgDefaultPayment"><i class="glyphicon glyphicon-credit-card"></i> Agregar Tarjeta</span>
+                            <!--<img id="imgDefaultPayment" style="max-width: 100px; height: 22px;" src="../images/payment.png" />-->
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="panel-body" style="padding: 6px;">
+
+                <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="tab1default">
+
+                            <div class="list-group" id="formularioTarjeta" style="display: block;">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                            <label for="CredictCardOwner" style="text-transform: uppercase">NOMBRE PROPIETARIO DE LA TARJETA</label>
+                                            <div class="input-group" style="margin-bottom: 9px;">
+                                                <span class="input-group-addon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path opacity=".3" d="M12 16c-2.69 0-5.77 1.28-6 2h12c-.2-.71-3.3-2-6-2z"></path><circle opacity=".3" cx="12" cy="8" r="2"></circle><path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-6 4c.22-.72 3.31-2 6-2 2.7 0 5.8 1.29 6 2H6zm6-6c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"></path></svg><!--<i class="glyphicon glyphicon-user"></i>--></span>
+                                                <input type="text" autocomplete="off" required="" autofocus="" style="text-transform: uppercase" placeholder="" name="txtCredictCardOwner" min="1" maxlength="30" id="ContentPlaceHolder1_txtCardHolder" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-xs-12">
+                                            <label for="ContentPlaceHolder1_txtCreditCard">NÚMERO DE TARJETA</label>
+                                            <div class="input-group" style="margin-bottom: 9px;">
+                                                <span class="input-group-addon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path opacity=".3" d="M4 12h16v6H4zm0-6h16v2H4z"></path><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"></path></svg><!--<i class="glyphicon glyphicon-credit-card"></i>--></span>
+                                                <input type="number" autocomplete="cc-number" required="" autofocus="" style="text-transform: uppercase" placeholder="" name="ContentPlaceHolder1_txtCreditCard" min="16" maxlength="16" id="ContentPlaceHolder1_txtCreditCard" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-xs-8">
+                                            <label for="cardExpiry"><span class="hidden-sm">FECHA</span><span class="visible-xs-inline"></span> DE EXPIRACIÓN</label>
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path opacity=".3" d="M5 8h14V6H5z"></path><path d="M7 11h2v2H7zm12-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-4 3h2v2h-2zm-4 0h2v2h-2z"></path></svg><!--<span class="glyphicon glyphicon-calendar"></span>--></span>
+                                                <input required="" autocomplete="cc-exp" name="ctl00$ContentPlaceHolder1$txtFhExpiration" data-date-format="mmyy" placeholder="MMYY" type="Tel" min="4" max="7" maxlength="7" id="ContentPlaceHolder1_txtFhExpiration" class="form-control">
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="col-md-4 col-xs-4">
+                                            <label for="cardCVC">CVV <span class="visible-md-inline hidden-sm">CODE</span></label>
+                                            <input required="" placeholder="" autocomplete="cc-csc" name="ctl00$ContentPlaceHolder1$txtCVV" type="number" min="3" max="4" maxlength="4" id="ContentPlaceHolder1_txtCVV" class="form-control">
+                                        </div>
+
+                                        
+
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item" style="">
+                                
+                                    <div id="dTerminos" class="" style="">
+                                        <!-- TERMINOS Y CONDICIONES START -->
+                                        <table>
+                                            <tbody><tr>
+                                                <td>
+                                                    <div class="material-switch pull-right" style="margin-left: 6px;">
+                                                        <input id="ContentPlaceHolder1_cbox1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbox1">
+                                                        <label for="ContentPlaceHolder1_cbox1" class="label-success"></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <label class="aceptar" style="color: rgb(240, 79, 47); margin-top: 6px; margin-left: 45px;">
+                                                        <button type="button" class="btn-link" data-toggle="modal" data-target="#myModalATC"><span class="hidden-sm">Aceptar </span>Términos y Condiciones</button>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+
+
+                                       
+
+                                        <!-- Modal ATC Start -->
+                                        <div class="modal fade" id="myModalATC" role="dialog">
+                                            <div class="modal-dialog" style="max-width: 600px; margin: 0px auto;">
+
+                                                <!-- Modal ATC content-->
+                                                <div class="modal-content h-scroll">
+                                                    <div class="modal-header modal-header-danger">
+                                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                                        <h4 class="modal-title">TÉRMINOS Y CONDICIONES UEPA TICKETS</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+
+                                                        <p>
+                                                            </p><div style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;">Uepatickets es una marca registrada de Multipagos Expresos SRL, proveedor líder de servicios de procesamiento de transacciones, boletería y pago de servicios (en adelante “Uepatickets”).</span></div><p class="p1" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><br><b>EL USUARIO ACEPTA VOLUNTARIAMENTE LOS SIGUIENTES TÉRMINOS Y CONDICIONES GENERALES :</b><br><br><b>Primero: </b>El usuario reconoce que Uepatickets es un agente de cobro e intermediación para la distribución de boletas, a favor de los organizadores o promotores de espectáculos artísticos o deportivos, no es el organizador del evento. El organizador es el responsable de la realización, logística, planificación, ejecución, montaje, riesgos, condiciones, organización y contenido del evento.<br><br><b>Segundo: </b>Todo usuario (en adelante el “Usuario” o “Cliente”) para hacer uso del portal, deberá registrarse previamente en el web site; <span class="s1" style="color: black;">www.uepatickets.com</span> (en adelante el “Portal”), otorgando información verídica, por lo cual Uepatickets no se hace responsable por cualquier error, falsedad o inexactitud declarada por el Usuario al momento del registro, siendo éste el único responsable de las consecuencias penales que se deriven por tal hecho. <span class="Apple-converted-space">&nbsp;</span></span></p><p class="p2" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; min-height: 14px; text-align: justify;"><span style="font-family: inherit;"><br></span></p><p class="p1" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><b>Tercero: </b>Toda transacción, compra de boletería y pago de facturas efectuado por el Usuario en el Portal, está sujeta a verificación por parte de la entidad bancaria que corresponda.<span class="Apple-converted-space">&nbsp;</span></span></p><p class="p2" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; min-height: 14px; text-align: justify;"><span style="font-family: inherit;"><br></span></p><p class="p1" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><b>Cuarto: </b>No se aceptará ningún tipo de cambio, reintegro, cancelación o devolución, siempre y cuando no sea por una falta imputable al responsable del evento.<span class="Apple-converted-space">&nbsp; </span>Dado lo anterior, todas las ventas procesadas a través de Uepatickets son definitivas, por lo cual los gastos de envío y uso de la plataforma no serán reembolsables.</span></p><p class="p2" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; min-height: 14px; text-align: justify;"><span style="font-family: inherit;"><br></span></p><p class="p1" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><b>Quinto: </b>El Usuario reconoce y acepta que cada boleto contiene una numeración o código único o individual que dará derecho a un (1) solo acceso por boleto, por lo que el titular será el único responsable de salvaguardar la confidencialidad del código contenido en el mismo. El Usuario acepta el riesgo de falsificación, copia, manipulaciones o duplicidad en cuyo caso solo la primera persona en presentar el boleto o código tendrá acceso al evento. Un (1) boleto o código equivaldrá siempre a una (1) sola entrada, sujeto a las condiciones del evento.</span></p><p class="p2" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; min-height: 14px; text-align: justify;"><span style="font-family: inherit;"><br></span></p><p class="p1" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><span class="s2" style="text-decoration-line: underline;"><b>Sexto: </b>Para el caso de los </span>espectáculos artísticos o deportivos, el Usuario reconoce y acepta que el precio de la boletería es cambiante conforme al momento en el cual se ejecuta la compra. Dicho precio deberá ser previamente informado al Usuario al inicio del proceso de compra, quien definirá de manera libre y voluntaria finalizar o no el mismo.<span class="Apple-converted-space">&nbsp;</span></span></p><p class="p2" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; min-height: 14px; text-align: justify;"><span style="font-family: inherit;"><br></span></p><p class="p3" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;">Séptimo:&nbsp;<b>Con la finalización de la compra de la boletería, el Usuario reconoce que de manera previa que: i) es responsable de la información personal suministrada al momento del registro en el Portal, ii) ha ingresado de manera correcta el número de tiquetes que desea adquirir, iii) entiende la fecha, hora y lugar en el cual se llevará a cabo el evento, iv) está de acuerdo con el precio de adquisición de la boletería. <span class="Apple-converted-space">&nbsp;</span></b></span></p><p class="p1" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><br><b>Octavo: </b>Uepatickets en ningún caso es responsable por: i) boletas no reclamadas ni ii) tiquetes recibidos por el Usuario que posteriormente se dañen, deterioren, rompan o pierdan, en consecuencia, Uepatickets no se hará cargo de su reposición.<span class="Apple-converted-space">&nbsp;</span></span></p><p class="p2" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; min-height: 14px; text-align: justify;"><span style="font-family: inherit;"><br></span></p><p class="p1" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><b>Noveno: </b>La postergación o cancelación del evento es asumida directamente por el organizador. En caso de lluvia, fallas técnicas, enfermedad, pandemia, calamidad pública, decisiones gubernamentales, o fuerza mayor, el evento podría ser pospuesto y si sucediera dicha postergación el ticket mantendrá su validez hasta la fijación de una nueva fecha. Si el evento es cancelado o postergado, Uepatickets gestionará ante el organizador el reembolso del costo de la boleta, con excepción de los gastos de envío y uso de la plataforma. Después de haber sido anunciado el aplazamiento o cancelación de un evento, se habilitará un plazo de quince (15) días hábiles para que el Usuario pueda realizar su solicitud de reembolso.<br></span></p><p class="p1" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><b>Décimo: </b>Los gastos o cargos por servicios de entrega de boletas, reflejados en el anverso de la presente boleta son aquellos correspondientes a servicios de manejo, envío y uso de sitio web así como también costos operacionales orientados a proporcionar un servicio de calidad y comodidad al adquiriente de la boleta.</span></p><p class="p1" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><br><b>Décimo Primero: </b>El Usuario hace constar que fue previamente avisado con anterioridad a la adquisición de la presente boleta de que el organizador se reserva el derecho de admisión de cualquier tipo de bebidas, comidas, cámaras fotográficas, celulares, filmadoras o grabadoras. Está prohibido ingresar todo tipo de armas de fuego o piezas punzantes o que representen peligro, drogas, fármacos, metales, maderas, rollos de papel, fósforos o encendedores, material pirotécnico, punteros laser, envases de vidrio o plástico.</span></p><p class="p2" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; min-height: 14px; text-align: justify;"><span style="font-family: inherit;"><br></span></p><p class="p4" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><span class="s3"><b>Décimo Segundo</b></span><span class="s4">:&nbsp;</span><span class="s5"> </span>Para el ingreso a cualquier evento, podrá ser requerido la tarjeta de vacunación físico o digital, con el esquema de vacunación completo requerido en la República Dominicana, hasta tanto por Decreto Presidencial se indique lo contrario. en caso de negarse el ingreso por el incumplimiento del anterior requisito, el valor de la boleta no será reembolsado.<span class="s5"><br></span></span></p><p class="p4" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><br></span></p><p class="p3" style="font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><span style="font-family: inherit;"><span class="s3"><b>Décimo Tercero</b></span>:&nbsp;<span class="s5"> </span>Cualquier conflicto entre las partes será resuelto conforme a las leyes de la República Dominicana.<span class="Apple-converted-space">&nbsp;</span></span></p><p class="p1" style="font-size: 12px; font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; text-align: justify;"><br></p><p class="p2" style="color: #555555; font-size: 12px; font-stretch: normal; font-variant-east-asian: normal; font-variant-numeric: normal; line-height: normal; margin: 0px; min-height: 14px; text-align: justify;"><br></p>
+                                                        <p></p>
+                                                    <!--    <p>
+                                                            Uepatickets es una marca registrada de Multipagos Expresos SRL, proveedor l&iacute;der de servicios de procesamiento de transacciones, boleter&iacute;a y pago de facturas.
+                                                                                                                                                    <br />
+                                                            <br />
+                                                            <b>EL USUARIO ACEPTA VOLUNTARIAMENTE LOS SIGUIENTES T&Eacute;RMINOS Y CONDICIONES:</b>
+                                                            <br />
+                                                            <br />
+                                                            El usuario reconoce que Uepatickets es un agente de cobro e intermediación para la distribución de boletas, a favor de los organizadores o promotores de espectáculos artísticos o deportivos, no es el organizador del evento. El organizador es el responsable de la realización, logística, planificación, ejecución, montaje, riesgos, condiciones, organización y contenido del evento. 
+                                                                                                                                                    
+                                                                                                                                                    <br />
+                                                            <br />
+                                                            No se aceptará ningún tipo de cambio, reintegro, cancelación o devolución, siempre y cuando no sea por una falta imputable al proveedor. En este caso, todas las ventas procesadas a través de Uepatickets son definitivas.
+                                                                                                                                                    
+                                                                                                                                                    <br />
+                                                            <br />
+                                                            El usuario reconoce y acepta que cada boleto contiene una numeraci&oacute;n o c&oacute;digo &uacute;nico o individual que dar&aacute; derecho a un solo acceso por boleto, por lo que el titular ser&aacute; el &uacute;nico responsable de salvaguardar la confidencialidad del c&oacute;digo contenido en el mismo. El usuario acepta el riesgo de falsificaci&oacute;n, copia, manipulaciones o duplicidad en cuyo caso solo la primera persona en presentar el boleto o c&oacute;digo tendr&aacute; acceso al evento. Un boleto o c&oacute;digo equivaldr&aacute; siempre a una sola entrada, sujeto a las condiciones del evento.
+                                                                                                                                                    
+                                                                                                                                                    <br />
+                                                            <br />
+                                                            El usuario reconoce y acepta que cada boleto contiene una numeración o código único o individual que dará derecho a un solo acceso por boleto. 
+                                                                                                                                                    
+                                                                                                                                                    <br />
+                                                            <br />
+                                                            Para el retiro de boletas procesadas en línea, el cliente debe presentar la tarjeta de crédito o débito utilizada en su compra, y una identificación oficial. En caso de que otra persona retire las boletas, deberá presentar un poder de autorización con legalización notarial, la tarjeta de crédito utilizada para la compra y copia de la identificación oficial del titular de la tarjeta utilizada.
+                                                                                                                                                    
+                                                                                                                                                    <br />
+                                                            <br />
+                                                            La postergación o cancelación del evento es asumida directamente por el organizador. En caso de lluvia, fallas técnicas, enfermedad o fuerza mayor, el evento podría ser pospuesto y si sucediera dicha postergación el ticket mantendrá su validez hasta la fijación de una nueva fecha. Si el evento es cancelado o postergado, Uepatickets gestionará ante el organizador el reembolso del costo íntegro de la boleta. Después de haber sido anunciado el aplazamiento o cancelación de un evento, se habilitará un plazo de quince (15) días hábiles para que el usuario pueda realizar su solicitud de reembolso.
+                                                                                                                                                    
+                                                                                                                                                    <br />
+                                                            <br />
+                                                            Los gastos o cargos por servicios de entrega de boletas, reflejados en el anverso de la presente boleta son aquellos correspondientes a servicios de manejo, envío y uso de sitio web así como también costos operacionales orientados a proporcionar un servicio de calidad y comodidad al adquiriente de la boleta. 
+                                                                                                                                                    
+                                                                                                                                                    <br />
+                                                            <br />
+                                                            El adquiriente hace constar que fue previamente avisado con anterioridad a la adquisición de la presente boleta de que el organizador se reserva el derecho de admisión de cualquier tipo de bebidas, comidas, cámaras fotográficas, celulares, filmadoras o grabadoras. Está prohibido ingresar todo tipo de armas de fuego o piezas punzantes o que representen peligro, drogas, fármacos, metales, maderas, rollos de papel, fósforos o encendedores, material pirotécnico, punteros laser, envases de vidrio o plástico. 
+                                                            <br/><br/>
+                                                            <b>Registrado en Pro Consumidor bajo el No. 018/2019</b>
+                                                                                                                                                    
+                                                                                                                                                    <br />
+                                                        </p>-->
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Modal ATC End -->                                                              
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade active in" id="tab2default">
+                            <!-- Banco Popular START -->
+                           <!-- <div style="text-align: center">
+                                Tarjetas Registradas
+                            </div> -->
+                            <div>
+                                <div id="vaults">
+                                <div id="card-list" class="list-group"><label class="list-group-item"><input type="radio" name="tarjetaUsuario" value="92725" checked=""><img class="card-icon" src="../images/tarjetasIconos/visa.svg"><span class="card-numbers">************3819</span></label><label class="list-group-item"><input type="radio" name="tarjetaUsuario" value="92734"><img class="card-icon" src="../images/tarjetasIconos/visa.svg"><span class="card-numbers">************0007</span></label><label class="list-group-item"><input type="radio" name="tarjetaUsuario" value="92735"><img class="card-icon" src="../images/tarjetasIconos/visa.svg"><span class="card-numbers">************0117</span></label><label class="list-group-item"><input type="radio" name="tarjetaUsuario" value="96644"><img class="card-icon" src="../images/tarjetasIconos/visa.svg"><span class="card-numbers">************6988</span></label></div></div>
+                            </div>
+                        </div>
+                        <!-- Banco Popular END -->
+                         <!-- Modal Continuar Start -->
+                                        <div class="modal fade" id="myModalContinuar" role="dialog">
+                                            <div class="modal-dialog" style="max-width: 600px; margin: 0px auto;">
+
+                                                <!-- Modal Continuar content-->
+                                                <div class="modal-content">
+                                                    <div class="modal-header modal-header-danger">
+                                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                                        <h4 class="modal-title">AVISO IMPORTANTE</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Antes de proceder a realizar el pago compruebe que la tarjeta de crédito o débito que utilizará en la compra tenga relieve. Solo el titular de la tarjeta podrá retirar los tickets correspondientes a su orden. Deberá presentar la tarjeta de crédito o débito con relieve físicamente, documento de identidad y confirmación impresa (Indispensable) </p>
+                                                        <strong style="color: red">NO ACEPTAMOS TARJETAS SIN RELIEVE.</strong>
+                                                        <p></p>
+                                                        <img class="" style="width: 100%; height: 250px;" src="../images/tarjeta_relieve.jpg">
+                                                    </div>
+
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Modal Continuar End -->
+                    </div>            
+                </form>
 
 
 
-    <div class="modal fade" id="myModalATC" role="dialog">
-        <div class="modal-dialog" style="max-width: 600px; margin: 0px auto;">
-        
-        <div class="modal-content h-scroll">
-        <div class="modal-header modal-header-danger">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h4 class="modal-title">TÉRMINOS Y CONDICIONES UEPA TICKETS</h4>
+                <div class="input-group" style="margin: 9px 0px 0px 0px;">
+                    <input placeholder="Ingresar Código Promocional" autocomplete="off" name="ctl00$ContentPlaceHolder1$txtPromoCode" min="6" max="25" maxlength="25" id="ContentPlaceHolder1_txtPromoCode" class="form-control">
+                    <span class="input-group-btn">
+                        <button onclick="ValidarCodigo();" id="btnValidarCodigo" class="subscribe btn btn-warning btn-block" type="button">Aplicar</button>
+                    </span>
+                </div>
+
+
+            </div>
+            <div class="panel-footer">
+                <div class="">
+                        <!-- BTN REALIZAR PEDIDO START -->
+                        <div class="">
+                            <button id="btnprocesarpago" class="subscribe btn btn-success btn-lg btn-block" type="button">
+                                <!--<a style='color: #fff' href="#step-3">-->
+                                Comprar
+                           
+                                        <!--</a>-->
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                            </button>
+                            
+                        </div>
+
+                 </div>
+            </div>
+
+
+
+
+
         </div>
-        <div class="modal-body">
-        <p>
-        Uepatickets es una marca registrada de Multipagos Expresos SRL, proveedor líder de servicios de procesamiento de transacciones, boletería y pago de facturas.
-        <br>
-        <br>
-        <b>EL USUARIO ACEPTA VOLUNTARIAMENTE LOS SIGUIENTES TÉRMINOS Y CONDICIONES:</b>
-        <br>
-        <br>
-        El usuario reconoce que Uepatickets es un agente de cobro e intermediación para la distribución de boletas, a favor de los organizadores o promotores de espectáculos artísticos o deportivos, no es el organizador del evento. El organizador es el responsable de la realización, logística, planificación, ejecución, montaje, riesgos, condiciones, organización y contenido del evento.
-        <br>
-        <br>
-        No se aceptará ningún tipo de cambio, reintegro, cancelación o devolución, siempre y cuando no sea por una falta imputable al proveedor. En este caso, todas las ventas procesadas a través de Uepatickets son definitivas.
-        <br>
-        <br>
-        El usuario reconoce y acepta que cada boleto contiene una numeración o código único o individual que dará derecho a un solo acceso por boleto, por lo que el titular será el único responsable de salvaguardar la confidencialidad del código contenido en el mismo. El usuario acepta el riesgo de falsificación, copia, manipulaciones o duplicidad en cuyo caso solo la primera persona en presentar el boleto o código tendrá acceso al evento. Un boleto o código equivaldrá siempre a una sola entrada, sujeto a las condiciones del evento.
-        <br>
-        <br>
-        El usuario reconoce y acepta que cada boleto contiene una numeración o código único o individual que dará derecho a un solo acceso por boleto.
-        <br>
-        <br>
-        Para el retiro de boletas procesadas en línea, el cliente debe presentar la tarjeta de crédito o débito utilizada en su compra, y una identificación oficial. En caso de que otra persona retire las boletas, deberá presentar un poder de autorización con legalización notarial, la tarjeta de crédito utilizada para la compra y copia de la identificación oficial del titular de la tarjeta utilizada.
-        <br>
-        <br>
-        La postergación o cancelación del evento es asumida directamente por el organizador. En caso de lluvia, fallas técnicas, enfermedad o fuerza mayor, el evento podría ser pospuesto y si sucediera dicha postergación el ticket mantendrá su validez hasta la fijación de una nueva fecha. Si el evento es cancelado o postergado, Uepatickets gestionará ante el organizador el reembolso del costo íntegro de la boleta. Después de haber sido anunciado el aplazamiento o cancelación de un evento, se habilitará un plazo de quince (15) días hábiles para que el usuario pueda realizar su solicitud de reembolso.
-        <br>
-        <br>
-        Los gastos o cargos por servicios de entrega de boletas, reflejados en el anverso de la presente boleta son aquellos correspondientes a servicios de manejo, envío y uso de sitio web así como también costos operacionales orientados a proporcionar un servicio de calidad y comodidad al adquiriente de la boleta.
-        <br>
-        <br>
-        El adquiriente hace constar que fue previamente avisado con anterioridad a la adquisición de la presente boleta de que el organizador se reserva el derecho de admisión de cualquier tipo de bebidas, comidas, cámaras fotográficas, celulares, filmadoras o grabadoras. Está prohibido ingresar todo tipo de armas de fuego o piezas punzantes o que representen peligro, drogas, fármacos, metales, maderas, rollos de papel, fósforos o encendedores, material pirotécnico, punteros laser, envases de vidrio o plástico.
-        <br><br>
-        <b>Registrado en Pro Consumidor bajo el No. 018/2019</b>
-        <br>
-        </p>
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
-        </div>
-        </div>
-        </div>
-    </div>
-    
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="tab-pane fade in active" id="tab2default" style="display: none;">
-    
-    
-    <div>
-    <div id="vaults">
-    </div>
-    </div>
-    </div>
-    
-    
-    <div class="modal fade" id="myModalContinuar" role="dialog">
-    <div class="modal-dialog" style="max-width: 600px; margin: 0px auto;">
-    
-    <div class="modal-content">
-    <div class="modal-header modal-header-danger">
-    <button type="button" class="close" data-dismiss="modal">×</button>
-    <h4 class="modal-title">AVISO IMPORTANTE</h4>
-    </div>
-    <div class="modal-body">
-    <p>Antes de proceder a realizar el pago compruebe que la tarjeta de crédito o débito que utilizará en la compra tenga relieve. Solo el titular de la tarjeta podrá retirar los tickets correspondientes a su orden. Deberá presentar la tarjeta de crédito o débito con relieve físicamente, documento de identidad y confirmación impresa (Indispensable) </p>
-    <strong style="color: red">NO ACEPTAMOS TARJETAS SIN RELIEVE.</strong>
-    <p></p>
-    <img class="" style="width: 100%; height: 250px;" src="https://uepatickets.com/images/tarjeta_relieve.jpg">
-    </div>
-    <div class="modal-footer">
-    <button type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-    </div>
-    </form>
-    <div class="input-group" style="margin: 9px 0px 0px 0px;">
-    <input placeholder="Ingresar Código Promocional" autocomplete="off" name="ctl00$ContentPlaceHolder1$txtPromoCode" min="6" max="25" maxlength="25" id="ContentPlaceHolder1_txtPromoCode" class="form-control">
-    <span class="input-group-btn">
-    <button onclick="ValidarCodigo();" id="btnValidarCodigo" class="subscribe btn btn-warning btn-block" type="button">Aplicar</button>
-    </span>
-    </div>
-    </div>
-    <div class="panel-footer">
-    <div class="">
-    
-    <div class="">
-    <button id="btnprocesarpago" class="subscribe btn btn-success btn-lg btn-block" type="button">
-    
-    Comprar
-    
-    <span class="glyphicon glyphicon-ok-circle"></span>
-    </button>
-    </div>
-    </div>
-    </div>
-    </div>
+
+
     
     <div class="hidden-md" style="text-align:center;">
     <img style="max-width:160px;opacity:0.6;" src="https://uepatickets.com/images/tarjetasIconos/Verified-ID-Check.png?ver=0.0.2">
