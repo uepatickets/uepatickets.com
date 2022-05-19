@@ -7916,197 +7916,245 @@
     </div>
     <div class="panel-body" style="padding: 6px;">
     <div class="list-group mb-2">
-    <div class="list-group-item" id="divRevision">
-    <div>
-    </div>
-    </div>
-    <div class="list-group-item">
+        
+        <div class="list-group-item" id="divRevision">
+        
+            <table cellspacing="0" rules="all" class="table table-bordred table-striped" itemstyle-cssclass="row col-style-detalle" border="1" id="gvRevisionOrden" style="border-collapse:collapse;">            
+            <tbody>
+                    <tr>             
+                        <th class="hiddencol" scope="col" style="color:White;">seat_id</th><th class="col-xs-5 col-sm-5 col-md-5 header-add-to-cart" scope="col">Sección</th><th class="col-xs-1 col-sm-1 col-md-1 header-add-to-cart" scope="col">Fila/Mesa</th><th class="col-xs-2 col-sm-2 col-md-2 header-add-to-cart" scope="col">Boleta</th><th class="col-xs-2 col-sm-2 col-md-2 header-add-to-cart" scope="col">Total</th><th class="col-xs-1 col-sm-1 col-md-1 header-add-to-cart" scope="col">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <td class="hiddencol" style="color: White; ">22947702</td><td><span id="gvRevisionOrden_lblSeccionesRevision_0" itemstyle-cssclass="btn btn-default">GENERAL </span><input type="hidden" name="gvRevisionOrden$ctl02$hSectionIdRevision" id="gvRevisionOrden_hSectionIdRevision_0" value="3193741"></td><td> <span id="gvRevisionOrden_lblFila_0" itemstyle-cssclass="btn btn-default">GA</span></td><td> <span id="gvRevisionOrden_lblAsiento_0" itemstyle-cssclass="btn btn-default">1</span></td><td><span id="gvRevisionOrden_lblTotalRevision_0" itemstyle-cssclass="btn btn-default">RD$150</span></td><td><span onclick="DeleteRow(this);" id="deleteThis" class="glyphicon glyphicon-trash"></span></td></tr><tr>
+                        <td class="hiddencol" style="color: White; ">22947703</td><td><span id="gvRevisionOrden_lblSeccionesRevision_1" itemstyle-cssclass="btn btn-default">GENERAL </span><input type="hidden" name="gvRevisionOrden$ctl02$hSectionIdRevision" id="gvRevisionOrden_hSectionIdRevision_1" value="3193741"></td><td> <span id="gvRevisionOrden_lblFila_1" itemstyle-cssclass="btn btn-default">GA</span></td><td> <span id="gvRevisionOrden_lblAsiento_1" itemstyle-cssclass="btn btn-default">2</span></td><td><span id="gvRevisionOrden_lblTotalRevision_1" itemstyle-cssclass="btn btn-default">RD$150</span></td><td><span onclick="DeleteRow(this);" id="deleteThis" class="glyphicon glyphicon-trash"></span></td></tr><tr>
+                        <td class="hiddencol" style="color: White; ">22947704</td><td><span id="gvRevisionOrden_lblSeccionesRevision_2" itemstyle-cssclass="btn btn-default">GENERAL </span><input type="hidden" name="gvRevisionOrden$ctl02$hSectionIdRevision" id="gvRevisionOrden_hSectionIdRevision_2" value="3193741"></td><td> <span id="gvRevisionOrden_lblFila_2" itemstyle-cssclass="btn btn-default">GA</span></td><td> <span id="gvRevisionOrden_lblAsiento_2" itemstyle-cssclass="btn btn-default">3</span></td><td><span id="gvRevisionOrden_lblTotalRevision_2" itemstyle-cssclass="btn btn-default">RD$150</span></td><td><span onclick="DeleteRow(this);" id="deleteThis" class="glyphicon glyphicon-trash"></span></td></tr><tr>
+                        <td class="hiddencol" style="color: White; ">22947705</td><td><span id="gvRevisionOrden_lblSeccionesRevision_3" itemstyle-cssclass="btn btn-default">GENERAL </span><input type="hidden" name="gvRevisionOrden$ctl02$hSectionIdRevision" id="gvRevisionOrden_hSectionIdRevision_3" value="3193741"></td><td> <span id="gvRevisionOrden_lblFila_3" itemstyle-cssclass="btn btn-default">GA</span></td><td> <span id="gvRevisionOrden_lblAsiento_3" itemstyle-cssclass="btn btn-default">4</span></td><td><span id="gvRevisionOrden_lblTotalRevision_3" itemstyle-cssclass="btn btn-default">RD$150</span></td><td><span onclick="DeleteRow(this);" id="deleteThis" class="glyphicon glyphicon-trash"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     
-    <p class="" style="">Métodos de Entrega</p>
-    <div id="tMetodoEntrega" style="width: 100%">
-    <div class="btn-group btn-group-toggle btn-group-justified" role="group">
-    <label id="tdwillcall" class="btn btn-default hidden hidden-md hidden-xs" role="group" style="">
-    <div style="" class="">
-    <div class="row">
-    <div class="col-md-2 col-xs-2 col-sm-2">
-    <input type="radio" name="inlineRadioOptions" id="rbWillCall" checked="checked" value="0">
-    </div>
-    <div class="col-md-7 col-xs-7 col-sm-7">Will Call</div>
-    <div class="col-md-2 col-xs-2 col-sm-2">
-    <button type="button" class="btn0" data-toggle="modal" title="El cliente debe retirar la boleta en Uepa Bella Vista Mall (oficina principal), en horario de Lunes a Viernes de 9:00AM a 6:00PM, y sábados de 10:00AM a 2:00PM. Adicional el cliente puede retirar directamente en la entrada del evento, máximo 1 hora previo al inicio del mismo. El cliente debe cumplir con los términos y condiciones para el retiro de la boleta." data-target="#myModalWillCall-0000000"><span class="glyphicon glyphicon-question-sign"></span></button>
-    </div>
-    </div>
+        <div class="list-group-item">
+            <!-- METODO DE ENTREGA START -->
+            <p class="" style="">Métodos de Entrega</p>
+            <div id="tMetodoEntrega" style="width: 100%">
+                <div class="btn-group btn-group-toggle btn-group-justified" role="group">
+                    <label id="tdwillcall" class="btn btn-default hidden hidden-md hidden-xs" role="group" style="">
+                        <div style="" class="">
+                            <div class="row">
+                                <div class="col-md-2 col-xs-2 col-sm-2">
+                                    <input type="radio" name="inlineRadioOptions" id="rbWillCall" checked="checked" value="0">
+                                </div>
+                                <div class="col-md-7 col-xs-7 col-sm-7">Will Call</div>
+                                <div class="col-md-2 col-xs-2 col-sm-2">
+                                    <button type="button" class="btn0" data-toggle="modal" title="El cliente debe retirar la boleta en Uepa Bella Vista Mall (oficina principal), en horario de Lunes a Viernes de 9:00AM a 6:00PM, y sábados de 10:00AM a 2:00PM. Adicional el cliente puede retirar directamente en la entrada del evento, máximo 1 hora previo al inicio del mismo. El cliente debe cumplir con los términos y condiciones para el retiro de la boleta." data-target="#myModalWillCall-0000000"><span class="glyphicon glyphicon-question-sign"></span></button>
+                                </div>
+                            </div>
+                            <!-- row -->
+                            
+                            <div class="alert alert-warning mb-3 small  text-justify"><b>AVISO:</b> Este evento requiere el retiro de las boletas únicamente por el tarjetahabiente de la compra, no se admiten entregas a terceros. Retiros en: Oficina Principal de Uepa Tickets en Bella Vista Mall 3er Nivel, ó en puerta del evento.</div>
+                            
+                            
+                        </div>
     
-    </div>
+                        <!-- Modal WillCall Start -->
+                        <div class="modal fade" id="myModalWillCall" role="dialog">
+                            <div class="modal-dialog" style="max-width: 600px; margin: 0px auto;">
     
-    <div class="modal fade" id="myModalWillCall" role="dialog">
-    <div class="modal-dialog" style="max-width: 600px; margin: 0px auto;">
+                                <!-- Modal WillCall content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                        <h4 class="modal-title">Servicio de Entrega por Will Call</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>El cliente debe retirar la boleta en Uepa Bella Vista Mall (oficina principal), en horario de Lunes a Viernes de 9:00AM a 6:00PM, y sábados de 10:00AM a 2:00PM. Adicional el cliente puede retirar directamente en la entrada del evento, máximo 1 hora previo al inicio del mismo. El cliente debe cumplir con los términos y condiciones para el retiro de la boleta.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
     
-    <div class="modal-content">
-    <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">×</button>
-    <h4 class="modal-title">Servicio de Entrega por Will Call</h4>
-    </div>
-    <div class="modal-body">
-    <p>El cliente debe retirar la boleta en Uepa Bella Vista Mall (oficina principal), en horario de Lunes a Viernes de 9:00AM a 6:00PM, y sábados de 10:00AM a 2:00PM. Adicional el cliente puede retirar directamente en la entrada del evento, máximo 1 hora previo al inicio del mismo. El cliente debe cumplir con los términos y condiciones para el retiro de la boleta.</p>
-    </div>
-    <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-    </div>
-    </div>
-    </div>
-    </div>
+                            </div>
+                        </div>
+                        <!-- Modal WillCall End -->
+                    </label>
     
-    </label>
-    <label id="tddomicilio" class="btn btn-default hidden hidden-md hidden-xs" role="group" style="">
-    <div style="" class="">
-    <div class="row">
-    <div class="col-md-2 col-xs-2 col-sm-2">
-    <input type="radio" name="inlineRadioOptions" id="rbTasker" value="1">
-    </div>
-    <div class="col-md-7 col-xs-7 col-sm-7">Domicilio</div>
-    <div class="col-md-2 col-xs-2 col-sm-2">
-    <button type="button" class="btn0" data-toggle="modal" data-target="#myModalTasker-0000000" title="El cliente recibe la boleta por via de mensajería o entrega a domicilio, a la dirección suministrada. Dicho servicio de entrega es provisto por la empresa Tasker. El cliente debe cumplir con los términos y condiciones para la entrega de la boleta."><span class="glyphicon glyphicon-question-sign"></span></button>
-    </div>
-    </div>
+                    <label id="tddomicilio" class="btn btn-default hidden hidden-md hidden-xs" role="group" style="">
+                        <div style="" class="">
+                            <div class="row">
+                                <div class="col-md-2 col-xs-2 col-sm-2">
+                                    <input type="radio" name="inlineRadioOptions" id="rbTasker" value="1">
+                                </div>
+                                <div class="col-md-7 col-xs-7 col-sm-7">Domicilio</div>
+                                <div class="col-md-2 col-xs-2 col-sm-2">
+                                    <button type="button" class="btn0" data-toggle="modal" data-target="#myModalTasker-0000000" title="El cliente recibe la boleta por via de mensajería o entrega a domicilio, a la dirección suministrada. Dicho servicio de entrega es provisto por la empresa Tasker. El cliente debe cumplir con los términos y condiciones para la entrega de la boleta."><span class="glyphicon glyphicon-question-sign"></span></button>
+                                </div>
+                            </div>
+                            <!-- row -->
+                        </div>
+                        <!-- Modal Tasker Start -->
+                        <div class="modal fade" id="myModalTasker" role="dialog">
+                            <div class="modal-dialog" style="max-width: 600px; margin: 0px auto;">
     
-    </div>
+                                <!-- Modal Tasker content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                        <h4 class="modal-title">Servicio de Entrega por Tasker</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>El cliente recibe la boleta por via de mensajería o entrega a domicilio, a la dirección suministrada. Dicho servicio de entrega es provisto por la empresa Tasker. El cliente debe cumplir con los términos y condiciones para la entrega de la boleta. </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
     
-    <div class="modal fade" id="myModalTasker" role="dialog">
-    <div class="modal-dialog" style="max-width: 600px; margin: 0px auto;">
+                            </div>
+                        </div>
+                        <!-- Modal Tasker End -->
+                    </label>
     
-    <div class="modal-content">
-    <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">×</button>
-    <h4 class="modal-title">Servicio de Entrega por Tasker</h4>
-    </div>
-    <div class="modal-body">
-    <p>El cliente recibe la boleta por via de mensajería o entrega a domicilio, a la dirección suministrada. Dicho servicio de entrega es provisto por la empresa Tasker. El cliente debe cumplir con los términos y condiciones para la entrega de la boleta. </p>
-    </div>
-    <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-    </div>
-    </div>
-    </div>
-    </div>
+                    <label id="tdeticket" class="btn btn-default" role="group" style="">
+                        <div style="" class="">
+                            <div class="row">
+                                <div class="col-md-2 col-xs-2 col-sm-2">
+                                    <input type="radio" name="inlineRadioOptions" id="rbTicketElectronico" value="2">
+                                </div>
+                                <div class="col-md-7 col-xs-7 col-sm-7">eTicket</div>
+                                <div class="col-md-2 col-xs-2 col-sm-2">
+                                    <button type="button" class="btn0" data-toggle="modal" data-target="#myModalTE-0000000" title="El cliente recibe la boleta en formato digital con código QR a su correo electrónico, permitiendo imprimir la boleta en su casa u oficina, o presentar a través de su equipo móvill en la entrada del evento. Dicha boleta NO ES TRANSFERIBLE. El cliente asume todo riesgo de duplicación o falsificación de las mismas."><span class="glyphicon glyphicon-question-sign"></span></button>
+                                </div>
+                            </div>
+                            <!-- row -->
+                        </div>
     
-    </label>
-    <label id="tdeticket" class="btn btn-default" role="group" style="">
-    <div style="" class="">
-    <div class="row">
-    <div class="col-md-2 col-xs-2 col-sm-2">
-    <input type="radio" name="inlineRadioOptions" id="rbTicketElectronico" value="2">
-    </div>
-    <div class="col-md-7 col-xs-7 col-sm-7">eTicket</div>
-    <div class="col-md-2 col-xs-2 col-sm-2">
-    <button type="button" class="btn0" data-toggle="modal" data-target="#myModalTE-0000000" title="El cliente recibe la boleta en formato digital con código QR a su correo electrónico, permitiendo imprimir la boleta en su casa u oficina, o presentar a través de su equipo móvill en la entrada del evento. Dicha boleta NO ES TRANSFERIBLE. El cliente asume todo riesgo de duplicación o falsificación de las mismas."><span class="glyphicon glyphicon-question-sign"></span></button>
-    </div>
-    </div>
+                        <!-- Modal TE Start -->
+                        <div class="modal fade" id="myModalTE" role="dialog">
+                            <div class="modal-dialog" style="max-width: 600px; margin: 0px auto;">
     
-    </div>
+                                <!-- Modal TE content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                        <h4 class="modal-title">PRÓXIMAMENTE: eTickets o Ticket Electrónico</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>El cliente recibe la boleta en formato digital con código QR a su correo electrónico, permitiendo imprimir la boleta en su casa u oficina, o presentar a través de su equipo móvill en la entrada del evento. Dicha boleta NO ES TRANSFERIBLE. El cliente asume todo riesgo de duplicación o falsificación de las mismas. </p>
+                                    </div>
     
-    <div class="modal fade" id="myModalTE" role="dialog">
-    <div class="modal-dialog" style="max-width: 600px; margin: 0px auto;">
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
     
-    <div class="modal-content">
-    <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">×</button>
-    <h4 class="modal-title">PRÓXIMAMENTE: eTickets o Ticket Electrónico</h4>
-    </div>
-    <div class="modal-body">
-    <p>El cliente recibe la boleta en formato digital con código QR a su correo electrónico, permitiendo imprimir la boleta en su casa u oficina, o presentar a través de su equipo móvill en la entrada del evento. Dicha boleta NO ES TRANSFERIBLE. El cliente asume todo riesgo de duplicación o falsificación de las mismas. </p>
-    </div>
-    <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-    </div>
-    </div>
-    </div>
-    </div>
+                            </div>
+                        </div>
+                        <!-- Modal TE End -->
+                    </label>
+                </div>
+                <!-- row -->
+            </div>
     
-    </label>
-    </div>
+            <div class="hidden" id="divTasker" style="margin-top: 9px;">
+                <span>Provincia</span>
+                <select id="sProvinciaTasker" class="form-control">
+                    <option value="0" selected="selected">-- Seleccione --</option>
+                    <option value="1">Distrito Nacional</option>
+                    <option value="2">Santo Domingo (Norte-Este-Oeste)</option>
+                </select>
     
-    </div>
-     <div class="hidden" id="divTasker" style="margin-top: 9px;">
-    <span>Provincia</span>
-    <select id="sProvinciaTasker" class="form-control">
-    <option value="0" selected="selected">-- Seleccione --</option>
-    <option value="1">Distrito Nacional</option>
-    <option value="2">Santo Domingo (Norte-Este-Oeste)</option>
-    </select>
-    <span>Dirección exacta de entrega:</span>
-    <textarea id="tbDireccionTasker" class="form-control"></textarea>
-    <span>Tel. de Contacto:</span>
-    <input id="tbTelTasker" type="tel" class="form-control" required="">
-    </div>
-    </div>
+                <span>Dirección exacta de entrega:</span>
     
-    <div class="list-group-item">
-    <table data-testid="" class="a-normal small-line-height">
-    <tbody>
-    <tr data-testid="" class="order-summary-unidenfitied-style">
-    <td class="a-text-left">
-    <span>Sub Total:</span>
-    </td>
-    <td class="a-text-right a-align-bottom aok-nowrap">
-    <span id="ContentPlaceHolder1_lblSubTotal">0</span>
-    </td>
-    </tr>
-    <tr data-testid="" class="order-summary-unidenfitied-style">
-    <td class="a-text-left">
-    <span>Cargo por Servicio:</span>
-    </td>
-    <td class="a-text-right a-align-bottom aok-nowrap">
-    <span id="ContentPlaceHolder1_lblCargoPorServicio">0</span>
-    </td>
-    </tr>
-    <tr id="rServicioDomicilio" data-testid="" class="order-summary-unidenfitied-style hidden">
-    <td class="a-text-left">
-    <span>Servicio a Domicilio:</span>
-    </td>
-    <td class="a-text-right a-align-bottom aok-nowrap">
-    <span id="ContentPlaceHolder1_lblServicioADomicilio">RD$0.00</span>
-    </td>
-    </tr>
-    <tr id="rDescuentoPromocional" data-testid="" class="order-summary-unidenfitied-style">
-    <td class="a-text-left">
-    <span>Descuento Promocional:</span>
-    </td>
-    <td class="a-text-right a-align-bottom aok-nowrap">
-    <span id="ContentPlaceHolder1_lblDescuentoPromocional">RD$0.00</span>
-    </td>
-    </tr>
-    <tr data-testid="">
-    <td class="" style="font-weight: bold;">
-    <span>ORDEN TOTAL:</span>
-    </td>
-    <td class="" style="font-weight: bold; float: right;">
-    <span id="ContentPlaceHolder1_lblGranTotal">0</span>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+                <textarea id="tbDireccionTasker" class="form-control"></textarea>
+    
+                <span>Tel. de Contacto:</span>
+    
+                <input id="tbTelTasker" type="tel" class="form-control" required="">
+            </div>
+        </div><!-- METODO DE ENTREGA END -->
+    
+        <div class="list-group-item">
+            <table data-testid="" class="a-normal small-line-height">
+                <tbody>
+                    <tr data-testid="" class="order-summary-unidenfitied-style">
+                        <td class="a-text-left">
+                            <span>Sub Total:</span>
+                        </td>
+                        <td class="a-text-right a-align-bottom aok-nowrap">
+                            <span id="ContentPlaceHolder1_lblSubTotal">RD$600.00</span>
+                        </td>
+                    </tr>
+    
+                    <tr data-testid="" class="order-summary-unidenfitied-style">
+                        <td class="a-text-left">
+                            <span>Cargo por Servicio:</span>
+                        </td>
+                        <td class="a-text-right a-align-bottom aok-nowrap">
+                            <span id="ContentPlaceHolder1_lblCargoPorServicio">RD$120.00</span>
+                        </td>
+                    </tr>
+    
+                    <tr id="rServicioDomicilio" data-testid="" class="order-summary-unidenfitied-style hidden">
+                        <td class="a-text-left">
+                            <span>Servicio a Domicilio:</span>
+                        </td>
+                        <td class="a-text-right a-align-bottom aok-nowrap">
+                            <span id="ContentPlaceHolder1_lblServicioADomicilio">RD$0.00</span>
+                        </td>
+                    </tr>
+    
+                    <tr id="rDescuentoPromocional" data-testid="" class="order-summary-unidenfitied-style">
+                        <td class="a-text-left">
+                            <span>Descuento Promocional:</span>
+                        </td>
+                        <td class="a-text-right a-align-bottom aok-nowrap">
+                            <span id="ContentPlaceHolder1_lblDescuentoPromocional">RD$0.00</span>
+                        </td>
+                    </tr>
+    
+                    <tr data-testid="">
+                        <td class="" style="font-weight: bold;">
+                            <span>ORDEN TOTAL:</span>
+                        </td>
+                        <td class="" style="font-weight: bold; float: right;">
+                            <span id="ContentPlaceHolder1_lblGranTotal">RD$720.00</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-    <br/>
 
-    <!-- Button trigger modal Pagar en cuotas 
-<button type="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#modalCuotas">Pagar en cuotas</button> -->
-  
+    </div><!--list-group-->
+
+
+    <div class="alert alert-success mb-1 mt-1" role="alert">
+        <b>
+            Calificas para Uepa Cuotas
+        </b>
+        <!--<p><b>Uepa Cuotas</b> ofrece a nuestros clientes preferenciales financiar sus tickets, permitiéndoles pagar en cómodas cuotas.</p>
+        <br/>-->
+        <button type="button" class="btn btn-success btn-sm btn-block" data-toggle="modal" data-target="#modalCuotas">Pagar en cuotas</button>
+
+    </div>
+
   <!-- Modal Cuotas -->
   <div class="modal modal-blur fade" id="modalCuotas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+    <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Pagar en cuotas</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Pagar en cuotas</h4>
 
         <!--  <div class="alert alert-success mb-1 mt-1" role="alert">
             <p><b>Uepa Cuotas</b> ofrece a nuestros clientes preferenciales financiar sus tickets, permitiéndoles pagar en cómodas cuotas.</p>
-          </div>-->
+        </div>-->
 
         </div>
         <div class="modal-body">
-         
+        
             
 
 
@@ -8115,10 +8163,10 @@
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgp8YdBlFZsFPNBBv9oCwXJKM1xvPOk_Trs6danwA8bvl5sxrD3IQ96tXiLcEnLGGonYagV_LE7bC8UmtnyEm5rWo_tE21uFtut9xykvEzVDyQfa_mWGHsWThVgA_Jb9HfdOfq3kg4-gDHD5lAa9GvcZ3Vvm9fo9aGa5MYbsPYpia2IC7kiFf0n8LsdNQ/s1600/test-event.jpeg" class="img-responsive">
                 </div>
                 <div class="col-md-6 col-sm-12 product_content">
-                    <h4>Test Event: <span>ID: 8785</span></h4>
-   
+                    <h4>Test Event <small class="label label-default">8785</small></h4>
+
                     <div class="row">
-                      <!-- <div class="col-md-12 col-sm-12">
+                    <!-- <div class="col-md-12 col-sm-12">
                             <p style="text-align: justify;"><b>Uepa Cuotas</b> ofrece a nuestros clientes preferenciales financiar sus tickets, permitiéndoles pagar en cómodas cuotas.</p>
                             <hr/>
                         </div>--> 
@@ -8129,7 +8177,7 @@
                         <!-- end col -->
                         <div class="col-md-12 col-sm-12">
                             <select class="form-control" name="select">
-                              <!-- <option value="" selected="">Seleccionar Cuotas</option>
+                            <!-- <option value="" selected="">Seleccionar Cuotas</option>
                                 <option value="2">2 cuotas de RD$450.00</option>
                                 <option value="3">3 cuotas de RD$300.00</option>--> 
                                 <option value="4">4 cuotas de RD$225.00</option>
@@ -8189,39 +8237,37 @@
 
         </div><!--modal-body-cuotas-->
         <div class="modal-footer hidden">
-          <!--<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>-->
-          <button type="button" class="btn btn-warning" data-dismiss="modal">Continuar</button>
+        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>-->
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Continuar</button>
         </div>
-      </div>
     </div>
-  </div><!--modal Cuotas-->
-
-
     </div>
-    </div><!--list-group-->
+</div><!--modal Cuotas-->
 
 
-    <div class="alert alert-success mb-1 mt-1" role="alert">
-        <p><b>Uepa Cuotas</b> ofrece a nuestros clientes preferenciales financiar sus tickets, permitiéndoles pagar en cómodas cuotas.</p>
-        <br/>
-        <button type="button" class="btn btn-success btn-sm btn-block" data-toggle="modal" data-target="#modalCuotas">Pagar en cuotas</button>
 
-      </div>
+
+
+
+
+
 
 
     </div><!--panel-body-->
     <div class="panel-footer">
-    <div class="row">
-    <div class="col-md-8 col-xs-9">
-    <div style="text-align: center; color: #777; font-size: 12px; margin: 3%; float: left;">Desbloqueo en <span style="font-weight: bold;" id="time">14:18</span> </div>
+        <div class="row">
+            <div class="col-md-8 col-xs-9">
+                <div style="text-align: center; color: #777; font-size: 12px; margin: 3%; float: left;">Desbloqueo en <span style="font-weight: bold;" id="time">14:18</span> 
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-3">
+                <button id="btnCancelar" type="button" class="btn btn-danger" style="float: right;">
+                <span class="glyphicon glyphicon-ban-circle hidden-md"></span><span class="hidden-xs">Cancelar</span>
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4 col-xs-3">
-    <button id="btnCancelar" type="button" class="btn btn-danger" style="float: right;">
-    <span class="glyphicon glyphicon-ban-circle hidden-md"></span><span class="hidden-xs">Cancelar</span>
-    </button>
-    </div>
-    </div>
-    </div>
+
     </div>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12">
