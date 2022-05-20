@@ -8133,7 +8133,7 @@
                       document.getElementById("subTotalCuotas").innerHTML = "RD$4,562.00";
                       document.getElementById("cargoPorServicio").innerHTML = "RD$1,260.00";
                       document.getElementById("ordenTotal").innerHTML = "RD$5,822.00";
-                      document.getElementById("btnPagarCuotas").innerHTML = "Orden en proceso";
+                      document.getElementById("btnPagarCuotas").innerHTML = "<button id='btnPagarCuotas' type='button' class='btn btn-block disabled' data-toggle='modal' data-target='#modalCuotasInfo'>Trámite en proceso</button>";
 
                   }
                 </script>
@@ -8193,7 +8193,7 @@
                         <b>Calificas para Uepa Cuotas</b><br/>
                         <small>Tus tickets en varios pagos. <!--<a class="text-info" href="#">Más.</a>--></small>
                    
-                        <button id="btnPagarCuotas" type="button" class="btn btn-dark btn-xs btn-block mt-2" data-toggle="modal" data-target="#modalCuotas">Pagar en cuotas</button>
+                        <div id="btnPagarCuotas"><button type="button" class="btn btn-dark btn-xs btn-block mt-2" data-toggle="modal" data-target="#modalCuotas">Pagar en cuotas</button></div>
                     </div>
                     <!--<div class="col-8 col-xs-8 col-md-8">
                         <small><b>Uepa Cuotas</b> ofrece a nuestros clientes preferenciales financiar sus tickets, permitiéndoles pagar en cómodas cuotas.</small>
@@ -8203,202 +8203,280 @@
 
             <!-- Modal Cuotas -->
             <div class="modal modal-blur fade" id="modalCuotas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
-                <svg width="100%" height="45" viewBox="0 0 108 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.8777 25.4676H15.9281V22.8345H15.8417C14.3309 25.9856 11.3093 26.2446 9.45323 26.2446C7.94244 26.2446 4.40288 25.8993 2.20144 23.1367C0.258993 20.7194 0 18.9496 0 15.5827V0.863312H7.38129V14.5036C7.38129 16.187 7.38129 19.4245 11.3093 19.4245C13.4245 19.4245 15.5396 18.3022 15.5396 14.4173V0.863312H22.8777V25.4676Z" fill="#EF4223"></path>
-                    <path d="M50.072 17.741C48.8633 20.5036 47.1367 22.6187 45.0648 24.0432C43.036 25.5108 40.5756 26.2446 38.072 26.2446C31.036 26.2446 25.036 20.5036 25.036 13.2086C24.9928 6.34532 30.3885 0 37.8993 0C45.4101 0 50.8921 5.95683 50.8921 13.4676C50.8921 14.4604 50.8058 14.8489 50.7194 15.4101H32.2446C32.6763 18.3453 35.1367 20.0719 38.0288 20.0719C40.2734 20.0719 41.482 19.036 42.518 17.7842H50.072V17.741ZM43.554 10.446C43.2518 8.97842 41.7842 6.21583 37.9425 6.21583C34.1439 6.21583 32.6763 8.97842 32.331 10.446H43.554Z" fill="#EF4223"></path>
-                    <path d="M53.0935 0.863326H60V3.58275H60.0432H60.1295C61.5971 1.72663 64.0144 0.0431824 67.813 0.0431824C76.5755 0.0431824 79.8561 7.72663 79.8561 13.4245C79.8561 20.5036 74.8921 26.3309 67.8561 26.3309C63.4101 26.3309 61.3381 24.2158 60.4317 23.2662V33.6691H53.0935V0.863326ZM72.4748 13.1655C72.4748 10.2302 70.3597 6.86332 66.3022 6.86332C62.2446 6.86332 60.1295 10.2302 60.1295 13.1655C60.1295 16.2734 62.4173 19.4245 66.3022 19.4245C70.1871 19.4245 72.4748 16.2734 72.4748 13.1655Z" fill="#EF4223"></path>
-                    <path d="M107.957 25.4676H100.576V22.7914H100.489C99.2374 25.2086 96.1727 26.2878 93.2806 26.2878C85.4676 26.2878 80.8921 20.1583 80.8921 13.1223C80.9353 5.05036 86.7626 0 93.3237 0C97.3813 0 99.6259 1.94245 100.532 3.45324H100.619V0.863309H108V25.4676H107.957ZM94.446 19.4245C99.0648 19.4245 100.619 15.5396 100.619 13.1223C100.619 10.1439 98.5899 6.86331 94.4029 6.86331C90.1727 6.86331 88.3166 10.4029 88.3166 13.2086C88.3166 15.5396 90 19.4245 94.446 19.4245Z" fill="#EF4223"></path>
-                    <path d="M15.21 34.56C8.57999 34.56 3.89999 39.45 3.89999 45.96C3.89999 52.5 8.57999 57.39 15.21 57.39C18.42 57.39 21.03 56.43 23.22 54.03L20.37 50.7C19.2 52.11 17.49 53.22 15.21 53.22C11.16 53.22 8.51999 50.16 8.51999 45.96C8.51999 41.76 11.16 38.73 15.21 38.73C17.46 38.73 19.14 39.81 20.31 41.19L23.19 37.86C21.06 35.67 18.69 34.56 15.21 34.56Z" fill="black"></path>
-                    <path d="M39.1992 41.79H34.7892V51.36C34.1892 52.29 33.3192 53.16 31.8792 53.16C30.3792 53.16 29.5392 52.02 29.5392 50.37V41.79H25.1292V50.61C25.1292 54.69 27.0192 57.3 30.6192 57.3C32.8092 57.3 34.2192 56.46 35.0292 55.35L35.2392 57H39.1992V41.79Z" fill="black"></path>
-                    <path d="M49.9931 41.49C45.3731 41.49 42.0131 44.88 42.0131 49.44C42.0131 54 45.3731 57.3 49.9931 57.3C54.6131 57.3 58.0331 54 58.0331 49.44C58.0331 44.88 54.6131 41.49 49.9931 41.49ZM49.9931 45.33C52.0631 45.33 53.5631 47.1 53.5631 49.44C53.5631 51.75 52.0631 53.46 49.9931 53.46C47.9531 53.46 46.4531 51.75 46.4531 49.44C46.4531 47.1 47.9531 45.33 49.9931 45.33Z" fill="black"></path>
-                    <path d="M66.2798 36.75H61.8698V41.79H59.1398V45.51H61.8698V51.33C61.8698 55.17 64.2398 57.3 67.9598 57.3C69.5198 57.3 70.6298 56.85 71.4398 56.37L70.3298 52.89C69.9098 53.13 69.2798 53.34 68.3798 53.34C67.1198 53.34 66.2798 52.59 66.2798 51.27V45.51H70.6298V41.79H66.2798V36.75Z" fill="black"></path>
-                    <path d="M79.1447 41.49C75.0947 41.49 72.3647 44.85 72.3647 49.41C72.3647 53.97 75.0947 57.3 79.1447 57.3C81.3347 57.3 82.8047 56.4 83.5847 55.32L83.8247 57H87.7847V41.79H83.8247L83.5847 43.5C82.8047 42.39 81.3347 41.49 79.1447 41.49ZM80.2247 45.33C81.7547 45.33 82.6847 46.17 83.3447 47.25V51.57C82.6847 52.65 81.7547 53.46 80.2247 53.46C78.2147 53.46 76.8047 51.9 76.8047 49.41C76.8047 46.89 78.2147 45.33 80.2247 45.33Z" fill="black"></path>
-                    <path d="M97.5166 41.49C93.4966 41.49 91.1266 43.44 91.1266 46.47C91.1266 48.84 92.6866 50.04 96.0166 50.85C98.0566 51.33 98.5966 51.75 98.5966 52.56C98.5966 53.43 97.7866 53.85 96.4366 53.85C94.7266 53.85 93.2866 53.19 92.2666 52.32L90.5866 55.47C91.8766 56.58 94.0966 57.3 96.4066 57.3C100.517 57.3 103.037 55.29 103.037 52.26C103.037 49.98 101.477 48.54 98.2666 47.76C96.1066 47.25 95.5366 46.95 95.5366 46.17C95.5366 45.36 96.2266 44.97 97.5166 44.97C99.0466 44.97 100.277 45.57 101.147 46.26L102.797 43.14C101.627 42.12 99.6166 41.49 97.5166 41.49Z" fill="black"></path>
-                </svg>
+                    <svg width="100%" height="45" viewBox="0 0 108 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.8777 25.4676H15.9281V22.8345H15.8417C14.3309 25.9856 11.3093 26.2446 9.45323 26.2446C7.94244 26.2446 4.40288 25.8993 2.20144 23.1367C0.258993 20.7194 0 18.9496 0 15.5827V0.863312H7.38129V14.5036C7.38129 16.187 7.38129 19.4245 11.3093 19.4245C13.4245 19.4245 15.5396 18.3022 15.5396 14.4173V0.863312H22.8777V25.4676Z" fill="#EF4223"></path>
+                        <path d="M50.072 17.741C48.8633 20.5036 47.1367 22.6187 45.0648 24.0432C43.036 25.5108 40.5756 26.2446 38.072 26.2446C31.036 26.2446 25.036 20.5036 25.036 13.2086C24.9928 6.34532 30.3885 0 37.8993 0C45.4101 0 50.8921 5.95683 50.8921 13.4676C50.8921 14.4604 50.8058 14.8489 50.7194 15.4101H32.2446C32.6763 18.3453 35.1367 20.0719 38.0288 20.0719C40.2734 20.0719 41.482 19.036 42.518 17.7842H50.072V17.741ZM43.554 10.446C43.2518 8.97842 41.7842 6.21583 37.9425 6.21583C34.1439 6.21583 32.6763 8.97842 32.331 10.446H43.554Z" fill="#EF4223"></path>
+                        <path d="M53.0935 0.863326H60V3.58275H60.0432H60.1295C61.5971 1.72663 64.0144 0.0431824 67.813 0.0431824C76.5755 0.0431824 79.8561 7.72663 79.8561 13.4245C79.8561 20.5036 74.8921 26.3309 67.8561 26.3309C63.4101 26.3309 61.3381 24.2158 60.4317 23.2662V33.6691H53.0935V0.863326ZM72.4748 13.1655C72.4748 10.2302 70.3597 6.86332 66.3022 6.86332C62.2446 6.86332 60.1295 10.2302 60.1295 13.1655C60.1295 16.2734 62.4173 19.4245 66.3022 19.4245C70.1871 19.4245 72.4748 16.2734 72.4748 13.1655Z" fill="#EF4223"></path>
+                        <path d="M107.957 25.4676H100.576V22.7914H100.489C99.2374 25.2086 96.1727 26.2878 93.2806 26.2878C85.4676 26.2878 80.8921 20.1583 80.8921 13.1223C80.9353 5.05036 86.7626 0 93.3237 0C97.3813 0 99.6259 1.94245 100.532 3.45324H100.619V0.863309H108V25.4676H107.957ZM94.446 19.4245C99.0648 19.4245 100.619 15.5396 100.619 13.1223C100.619 10.1439 98.5899 6.86331 94.4029 6.86331C90.1727 6.86331 88.3166 10.4029 88.3166 13.2086C88.3166 15.5396 90 19.4245 94.446 19.4245Z" fill="#EF4223"></path>
+                        <path d="M15.21 34.56C8.57999 34.56 3.89999 39.45 3.89999 45.96C3.89999 52.5 8.57999 57.39 15.21 57.39C18.42 57.39 21.03 56.43 23.22 54.03L20.37 50.7C19.2 52.11 17.49 53.22 15.21 53.22C11.16 53.22 8.51999 50.16 8.51999 45.96C8.51999 41.76 11.16 38.73 15.21 38.73C17.46 38.73 19.14 39.81 20.31 41.19L23.19 37.86C21.06 35.67 18.69 34.56 15.21 34.56Z" fill="black"></path>
+                        <path d="M39.1992 41.79H34.7892V51.36C34.1892 52.29 33.3192 53.16 31.8792 53.16C30.3792 53.16 29.5392 52.02 29.5392 50.37V41.79H25.1292V50.61C25.1292 54.69 27.0192 57.3 30.6192 57.3C32.8092 57.3 34.2192 56.46 35.0292 55.35L35.2392 57H39.1992V41.79Z" fill="black"></path>
+                        <path d="M49.9931 41.49C45.3731 41.49 42.0131 44.88 42.0131 49.44C42.0131 54 45.3731 57.3 49.9931 57.3C54.6131 57.3 58.0331 54 58.0331 49.44C58.0331 44.88 54.6131 41.49 49.9931 41.49ZM49.9931 45.33C52.0631 45.33 53.5631 47.1 53.5631 49.44C53.5631 51.75 52.0631 53.46 49.9931 53.46C47.9531 53.46 46.4531 51.75 46.4531 49.44C46.4531 47.1 47.9531 45.33 49.9931 45.33Z" fill="black"></path>
+                        <path d="M66.2798 36.75H61.8698V41.79H59.1398V45.51H61.8698V51.33C61.8698 55.17 64.2398 57.3 67.9598 57.3C69.5198 57.3 70.6298 56.85 71.4398 56.37L70.3298 52.89C69.9098 53.13 69.2798 53.34 68.3798 53.34C67.1198 53.34 66.2798 52.59 66.2798 51.27V45.51H70.6298V41.79H66.2798V36.75Z" fill="black"></path>
+                        <path d="M79.1447 41.49C75.0947 41.49 72.3647 44.85 72.3647 49.41C72.3647 53.97 75.0947 57.3 79.1447 57.3C81.3347 57.3 82.8047 56.4 83.5847 55.32L83.8247 57H87.7847V41.79H83.8247L83.5847 43.5C82.8047 42.39 81.3347 41.49 79.1447 41.49ZM80.2247 45.33C81.7547 45.33 82.6847 46.17 83.3447 47.25V51.57C82.6847 52.65 81.7547 53.46 80.2247 53.46C78.2147 53.46 76.8047 51.9 76.8047 49.41C76.8047 46.89 78.2147 45.33 80.2247 45.33Z" fill="black"></path>
+                        <path d="M97.5166 41.49C93.4966 41.49 91.1266 43.44 91.1266 46.47C91.1266 48.84 92.6866 50.04 96.0166 50.85C98.0566 51.33 98.5966 51.75 98.5966 52.56C98.5966 53.43 97.7866 53.85 96.4366 53.85C94.7266 53.85 93.2866 53.19 92.2666 52.32L90.5866 55.47C91.8766 56.58 94.0966 57.3 96.4066 57.3C100.517 57.3 103.037 55.29 103.037 52.26C103.037 49.98 101.477 48.54 98.2666 47.76C96.1066 47.25 95.5366 46.95 95.5366 46.17C95.5366 45.36 96.2266 44.97 97.5166 44.97C99.0466 44.97 100.277 45.57 101.147 46.26L102.797 43.14C101.627 42.12 99.6166 41.49 97.5166 41.49Z" fill="black"></path>
+                    </svg>
 
-               <!--  <h4 class="modal-title" id="myModalLabel">Pagar en cuotas</h4>
+                <!--  <h4 class="modal-title" id="myModalLabel">Pagar en cuotas</h4>
 
-                 <div class="alert alert-success mb-1 mt-1" role="alert">
-                    <p><b>Uepa Cuotas</b> ofrece a nuestros clientes preferenciales financiar sus tickets, permitiéndoles pagar en cómodas cuotas.</p>
-                </div>-->
+                    <div class="alert alert-success mb-1 mt-1" role="alert">
+                        <p><b>Uepa Cuotas</b> ofrece a nuestros clientes preferenciales financiar sus tickets, permitiéndoles pagar en cómodas cuotas.</p>
+                    </div>-->
 
-              <!-- <ul class="nav nav-tabs">
-                    <li id="pasoUnoCuotas" class="active">
-                        <a href="#pasoUnoCuotas" data-toggle="tab" aria-expanded="true">
-                            <span class="panel-title"> pasoUnoCuotas</span>
-                        </a>
-                    </li>
-                    <li id="pasoTresCuotas" class="">
-                        <a href="#pasoTresCuotas" data-toggle="tab" aria-expanded="false">
-                                <span class="panel-title">pasoTresCuotas</span>
-                        </a>
-                    </li>
-                </ul>--> 
+                <!-- <ul class="nav nav-tabs">
+                        <li id="pasoUnoCuotas" class="active">
+                            <a href="#pasoUnoCuotas" data-toggle="tab" aria-expanded="true">
+                                <span class="panel-title"> pasoUnoCuotas</span>
+                            </a>
+                        </li>
+                        <li id="pasoTresCuotas" class="">
+                            <a href="#pasoTresCuotas" data-toggle="tab" aria-expanded="false">
+                                    <span class="panel-title">pasoTresCuotas</span>
+                            </a>
+                        </li>
+                    </ul>--> 
 
 
-                </div>
-            
-                <div class="modal-body">
+                    </div>
                 
-               
-                    <div class="tab-content">
+                    <div class="modal-body">
+                    
+                
+                        <div class="tab-content">
 
-                        <div class="tab-pane fade" id="pasoTresCuotas">
+                            <div class="tab-pane fade" id="pasoTresCuotas">
 
-                            <div id="ContentRowTab">
-                                <h3>Términos y Condiciones</h3>
-									
-                                <p style="text-align: justify;">Para la adquisición de los productos que se ofrecen en este sitio es requisito necesario, que lea y acepte los siguientes Términos y Condiciones que a continuación se redactan. El uso de nuestros servicios, así como la compra de nuestros productos implicará que usted ha leído y aceptado los Términos y Condiciones de Uso en el presente documento.</p><p style="text-align: justify;">Queda convenido que para los efectos de este acuerdo se entiende que:</p><p style="text-align: justify;">a) Uepatickets, en lo adelante “UEPA”, es una marca registrada de Multipagos Expresos SRL, proveedor líder de servicios de procesamiento de transacciones, boletería y pago de facturas.</p><p style="text-align: justify;">b) El usuario, en lo adelante “CLIENTE”, es la persona que hace uso de los servicios de Uepatickets para la compra de boletas a eventos de cualquier naturaleza y servicios asociados</p><p style="text-align: justify;">c) Para hacer referencia a Uepatickets y Usuario actuando en conjunto, serán denominados en adelante como “Las PARTES”</p><p style="text-align: justify;">El CLIENTE reconoce que UEPA es un agente de cobro e intermediación para la distribución de boletas, a favor de los organizadores o promotores de espectáculos artísticos o deportivos, no es el organizador del evento. El organizador es el responsable de la realización, logística, planificación, ejecución, montaje, riesgos, condiciones, organización y contenido del evento.</p><p style="text-align: justify;">Las PARTES reconocen y aceptan que, en los términos y condiciones del presente documento legal, se establecen las condiciones de un contrato bilateral de servicio. Las manifestaciones de voluntad expresadas y/o transmitidas por medios electrónicos y/o informáticos se reputarán como válidas y eficaces, quedando a todo efecto probatorio constancia de las mismas. Con la aceptación por medio de firma electrónica o cualquier otra señal electrónica equivalente del presente contrato, el cliente reconoce y acepta sus obligaciones descritas a continuación.</p><p style="text-align: justify;">UEPA ofrece un servicio que habilita al CLIENTE a pagar en cuotas la compra de boletas para eventos, permitiendo pagar el monto acordado en un máximo de 4 a 6 cuotas, según aplique. Todas las compras y transacciones que se lleven a cabo por medio de este sitio web, están sujetas a un proceso de confirmación y verificación. En el momento de la compra el CLIENTE es el responsable de facilitar sus datos correctamente en los procesos de compra establecidos por UEPA, debiendo prestar especial atención en cuanto a la introducción de los datos bancarios o de su tarjeta de débito o crédito y de carácter personal. UEPA se reserva el derecho de rechazar las solicitudes que no cumplan con sus requisitos. En caso de que el CLIENTE no sea aprobado, y sea notificado luego de su primer pago de cuota, siendo este el que inicia el proceso y garantiza la reserva, se le reembolsará el valor abonado a excepción de la tarifa de administración correspondiente. UEPA habilitará al CLIENTE la opción de pagar totalmente la boleta en un tiempo máximo para no perder la reserva en caso de así desearlo.</p><p style="text-align: justify;">Cuando el CLIENTE es aprobado para pago en cuotas, debe hacer un primer pago al momento de la compra cuyo monto es definido según el valor de la(s) boleta(s). El monto corresponde a la suma de la primera cuota y una tarifa de administración por el servicio de pago en cuotas. 30 días a partir de la primera cuota, y cada 30 días hasta alcanzar el plazo máximo acordado, el cliente deberá pagar las cuotas correspondientes incluyendo la tarifa de administración. El pago inicial garantiza la reserva de la boleta siempre y cuando se paguen correctamente el resto de las cuotas. La tarifa de administración y el cargo de servicio de boletería no son reembolsables.</p><p style="text-align: justify;">En caso de boletas que serán pagadas en su totalidad antes del evento, las entradas serán reservadas hasta 15 días antes del evento. Si no se ha completado el pago para este momento, se entenderá cancelado unilateralmente el acuerdo por parte del CLIENTE, perdiendo el valor abonado hasta entonces, la reserva se eliminará y las entradas se pondrán nuevamente a la venta al público general.</p><p style="text-align: justify;">Una vez realizado el pago de la última cuota requerida, el CLIENTE recibirá la confirmación definitiva de su entrada de manera digital. Una vez UEPA envía la entrada, la misma queda bajo la responsabilidad única del CLIENTE.</p><p style="text-align: justify;">En caso de boletas que serán pagadas en su totalidad una vez pasado el evento, las entradas serán reservadas hasta 15 días antes del evento, siempre y cuando el cliente haya pagado mínimo dos cuotas previo a esta fecha. Si no se ha completado el pago de las dos primeras cuotas para este momento, se entenderá cancelado unilateralmente el acuerdo por parte del CLIENTE, perdiendo el valor abonado hasta entonces, la reserva se eliminará y las entradas se pondrán nuevamente a la venta al público general. A pesar de que el evento haya sucedido, el cliente reconoce su responsabilidad de abonar a UEPA la cantidad de cuotas pendientes hasta finalizar el pago completo. El cliente entiende y acepta que si no paga las cuotas pendientes posteriores al evento se hace responsable de abonar a UEPA cualquier gasto asociado con la gestión de la cobranza tardía, además del importe de cuotas pendientes.</p><p style="text-align: justify;">Las PARTES reconocen y aceptan que en el presente documento legal se establecen las condiciones de un acuerdo bilateral de servicio y que el mismo podrá ser respaldado por la transmisión y recepción de mensajes a través de herramientas de comunicación electrónicas como, por ejemplo, pero no limitado a estas, SMS, correo electrónico, llamadas telefónicas, mensajes y audios de Whatsapp, y cualquier otro medio utilizado para comunicación entre Las PARTES.</p><p style="text-align: justify;">El cliente tiene derecho de saldar o prepagar todas las cuotas pendientes sin que se le aplique ninguna penalidad, pero no se le devolverá la tarifas administración por el servicio de pago en cuotas. Los pagos de la primera cuota y las cuotas subsiguientes se realizarán mediante tarjeta de crédito o débito. El cliente autoriza expresamente a Uepa a realizar de forma automática los pagos de las cuotas 2 a 6 según corresponda al medio de pago utilizado por el cliente para el pago de la primera cuota. En el caso de que el pago de estas cuotas no sea aceptado, el cliente autoriza expresamente a UEPA a cobrar dichas cuotas a través de otros métodos, como pueden ser débito vía cuenta bancaria.</p><p style="text-align: justify;">El cliente presta su consentimiento a que se le soliciten datos de carácter personal y de la existencia de una base de datos que permitan corroborar su identidad y su situación crediticia. El cliente acepta que UEPA y empresas colaboradoras que ésta designe podrán consultar dicha base de datos. El cliente otorga expresamente permiso a UEPA y/o empresas relacionadas a consultar los burós de crédito. Adicionalmente, UEPA queda explícitamente autorizada para transferir cualquier información y cederla a terceros socios comerciales siempre en cumplimiento con la Ley de Protección Integral de los Datos Personales.</p>
+                                <div id="ContentRowTab">
+                                    <h3>Términos y Condiciones</h3>
+                                        
+                                    <p style="text-align: justify;">Para la adquisición de los productos que se ofrecen en este sitio es requisito necesario, que lea y acepte los siguientes Términos y Condiciones que a continuación se redactan. El uso de nuestros servicios, así como la compra de nuestros productos implicará que usted ha leído y aceptado los Términos y Condiciones de Uso en el presente documento.</p><p style="text-align: justify;">Queda convenido que para los efectos de este acuerdo se entiende que:</p><p style="text-align: justify;">a) Uepatickets, en lo adelante “UEPA”, es una marca registrada de Multipagos Expresos SRL, proveedor líder de servicios de procesamiento de transacciones, boletería y pago de facturas.</p><p style="text-align: justify;">b) El usuario, en lo adelante “CLIENTE”, es la persona que hace uso de los servicios de Uepatickets para la compra de boletas a eventos de cualquier naturaleza y servicios asociados</p><p style="text-align: justify;">c) Para hacer referencia a Uepatickets y Usuario actuando en conjunto, serán denominados en adelante como “Las PARTES”</p><p style="text-align: justify;">El CLIENTE reconoce que UEPA es un agente de cobro e intermediación para la distribución de boletas, a favor de los organizadores o promotores de espectáculos artísticos o deportivos, no es el organizador del evento. El organizador es el responsable de la realización, logística, planificación, ejecución, montaje, riesgos, condiciones, organización y contenido del evento.</p><p style="text-align: justify;">Las PARTES reconocen y aceptan que, en los términos y condiciones del presente documento legal, se establecen las condiciones de un contrato bilateral de servicio. Las manifestaciones de voluntad expresadas y/o transmitidas por medios electrónicos y/o informáticos se reputarán como válidas y eficaces, quedando a todo efecto probatorio constancia de las mismas. Con la aceptación por medio de firma electrónica o cualquier otra señal electrónica equivalente del presente contrato, el cliente reconoce y acepta sus obligaciones descritas a continuación.</p><p style="text-align: justify;">UEPA ofrece un servicio que habilita al CLIENTE a pagar en cuotas la compra de boletas para eventos, permitiendo pagar el monto acordado en un máximo de 4 a 6 cuotas, según aplique. Todas las compras y transacciones que se lleven a cabo por medio de este sitio web, están sujetas a un proceso de confirmación y verificación. En el momento de la compra el CLIENTE es el responsable de facilitar sus datos correctamente en los procesos de compra establecidos por UEPA, debiendo prestar especial atención en cuanto a la introducción de los datos bancarios o de su tarjeta de débito o crédito y de carácter personal. UEPA se reserva el derecho de rechazar las solicitudes que no cumplan con sus requisitos. En caso de que el CLIENTE no sea aprobado, y sea notificado luego de su primer pago de cuota, siendo este el que inicia el proceso y garantiza la reserva, se le reembolsará el valor abonado a excepción de la tarifa de administración correspondiente. UEPA habilitará al CLIENTE la opción de pagar totalmente la boleta en un tiempo máximo para no perder la reserva en caso de así desearlo.</p><p style="text-align: justify;">Cuando el CLIENTE es aprobado para pago en cuotas, debe hacer un primer pago al momento de la compra cuyo monto es definido según el valor de la(s) boleta(s). El monto corresponde a la suma de la primera cuota y una tarifa de administración por el servicio de pago en cuotas. 30 días a partir de la primera cuota, y cada 30 días hasta alcanzar el plazo máximo acordado, el cliente deberá pagar las cuotas correspondientes incluyendo la tarifa de administración. El pago inicial garantiza la reserva de la boleta siempre y cuando se paguen correctamente el resto de las cuotas. La tarifa de administración y el cargo de servicio de boletería no son reembolsables.</p><p style="text-align: justify;">En caso de boletas que serán pagadas en su totalidad antes del evento, las entradas serán reservadas hasta 15 días antes del evento. Si no se ha completado el pago para este momento, se entenderá cancelado unilateralmente el acuerdo por parte del CLIENTE, perdiendo el valor abonado hasta entonces, la reserva se eliminará y las entradas se pondrán nuevamente a la venta al público general.</p><p style="text-align: justify;">Una vez realizado el pago de la última cuota requerida, el CLIENTE recibirá la confirmación definitiva de su entrada de manera digital. Una vez UEPA envía la entrada, la misma queda bajo la responsabilidad única del CLIENTE.</p><p style="text-align: justify;">En caso de boletas que serán pagadas en su totalidad una vez pasado el evento, las entradas serán reservadas hasta 15 días antes del evento, siempre y cuando el cliente haya pagado mínimo dos cuotas previo a esta fecha. Si no se ha completado el pago de las dos primeras cuotas para este momento, se entenderá cancelado unilateralmente el acuerdo por parte del CLIENTE, perdiendo el valor abonado hasta entonces, la reserva se eliminará y las entradas se pondrán nuevamente a la venta al público general. A pesar de que el evento haya sucedido, el cliente reconoce su responsabilidad de abonar a UEPA la cantidad de cuotas pendientes hasta finalizar el pago completo. El cliente entiende y acepta que si no paga las cuotas pendientes posteriores al evento se hace responsable de abonar a UEPA cualquier gasto asociado con la gestión de la cobranza tardía, además del importe de cuotas pendientes.</p><p style="text-align: justify;">Las PARTES reconocen y aceptan que en el presente documento legal se establecen las condiciones de un acuerdo bilateral de servicio y que el mismo podrá ser respaldado por la transmisión y recepción de mensajes a través de herramientas de comunicación electrónicas como, por ejemplo, pero no limitado a estas, SMS, correo electrónico, llamadas telefónicas, mensajes y audios de Whatsapp, y cualquier otro medio utilizado para comunicación entre Las PARTES.</p><p style="text-align: justify;">El cliente tiene derecho de saldar o prepagar todas las cuotas pendientes sin que se le aplique ninguna penalidad, pero no se le devolverá la tarifas administración por el servicio de pago en cuotas. Los pagos de la primera cuota y las cuotas subsiguientes se realizarán mediante tarjeta de crédito o débito. El cliente autoriza expresamente a Uepa a realizar de forma automática los pagos de las cuotas 2 a 6 según corresponda al medio de pago utilizado por el cliente para el pago de la primera cuota. En el caso de que el pago de estas cuotas no sea aceptado, el cliente autoriza expresamente a UEPA a cobrar dichas cuotas a través de otros métodos, como pueden ser débito vía cuenta bancaria.</p><p style="text-align: justify;">El cliente presta su consentimiento a que se le soliciten datos de carácter personal y de la existencia de una base de datos que permitan corroborar su identidad y su situación crediticia. El cliente acepta que UEPA y empresas colaboradoras que ésta designe podrán consultar dicha base de datos. El cliente otorga expresamente permiso a UEPA y/o empresas relacionadas a consultar los burós de crédito. Adicionalmente, UEPA queda explícitamente autorizada para transferir cualquier información y cederla a terceros socios comerciales siempre en cumplimiento con la Ley de Protección Integral de los Datos Personales.</p>
+                                </div>
+                                <br/>
+                                <div class="">
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                                <div class="material-switch pull-right" style="margin-left: 6px;">
+                                                    <input id="ContentPlaceHolder1_cbox1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbox1">
+                                                    <label for="ContentPlaceHolder1_cbox1" class="label-success"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="aceptar" style="margin-top: 6px; margin-left: 45px;">
+                                                Aceptar Términos y Conficiones para proceder con el financiamiento.
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </div> 
+
+                                <div class="row">
+                                
+                                
+                                    <hr/>
+                                    <div class="col-xs-4 col-md-4">
+                                        <a class="btn btn-default btn-block" href="#pasoDosCuotas" data-toggle="tab" aria-expanded="true">
+                                            <span class="panel-title"> Volver</span>
+                                        </a>
+                                    </div>
+                                        <div class="col-xs-4 col-md-4">
+
+                                        </div>
+                                        <div class="col-xs-4 col-md-4">
+                                            <button type="button" class="btn btn-success btn-block" data-dismiss="modal" onclick="recargar()">Aceptar</button>
+                                        </div>
+                                
+                                </div><!--row-->
+                                
+                            </div><!--pasoTresCuotas tab-->
+
+                            <div class="tab-pane fade" id="pasoDosCuotas">
+                                <p>Añadir documento de indentidad nacional.</p>
+                                <div class="jumbotron" id="cedulaFront">
+                                    
+                                    <div class="text-center"><label id="import-manual-trigger" class="btn btn-default btn-lg">Subir foto delantera<input type="file" id="import-file-select" class="hidden"></label></div>
+                                    
+                                </div>
+                                <hr/>
+                                <div class="jumbotron" id="cedulaBack">
+                                    
+                                    <div class="text-center"><label id="import-manual-trigger" class="btn btn-default btn-lg">Subir foto trasera<input type="file" id="import-file-select" class="hidden"></label></div>
+                                    
                             </div>
-                            <br/>
-                            <div class="">
-                                <table>
-                                    <tbody><tr>
-                                        <td>
-                                            <div class="material-switch pull-right" style="margin-left: 6px;">
-                                                <input id="ContentPlaceHolder1_cbox1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbox1">
-                                                <label for="ContentPlaceHolder1_cbox1" class="label-success"></label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <label class="aceptar" style="margin-top: 6px; margin-left: 45px;">
-                                               Aceptar Términos y Conficiones para proceder con el financiamiento.
-                                            </label>
-                                        </td>
+
+                                <div class="row">
+                                
+                                    <hr/>
+                                    <div class="col-xs-4 col-md-4">
+                                        <a class="btn btn-default btn-block" href="#pasoUnoCuotas" data-toggle="tab" aria-expanded="true">
+                                            <span class="panel-title"> Volver</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-4 col-md-4">
+
+                                    </div>
+                                    <div class="col-xs-4 col-md-4">
+                                        <a class="btn btn-warning btn-block" href="#pasoTresCuotas" data-toggle="tab" aria-expanded="true">
+                                            <span class="panel-title"> Continuar</span>
+                                        </a>
+                                    </div>
+                                    
+                                
+                                </div><!--row-->
+
+                            </div><!--pasoDosCuotas-->
+
+                            <div class="tab-pane fade active in" id="pasoUnoCuotas">
+                                <p>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</p>
+                                <table class="table text-warning">
+                                    <!--<caption>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</caption>-->
+                                    <thead>
+                                    <tr>
+                                        <th>CUOTA #</th>
+                                        <th>FECHA</th>
+                                        <th>MONTO</th>
+                                        <th>DESCRIPCIÓN</th>
                                     </tr>
-                                </tbody></table>
-                            </div> 
+                                    </thead>
+                                    <tbody>
+                                    <tr class="warning">
+                                        <th class="" scope="row">1</th>
+                                        <td>Hoy</td>
+                                        <td>$5,832.00</td>
+                                        <td>Incluye cargos por servicio</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <th scope="row">2</th>
+                                        <td>Junio 11</td>
+                                        <td>$4,572.00</td>
+                                        <td>2do Pago</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <th scope="row">3</th>
+                                        <td>Julio 12</td>
+                                        <td>$4,572.00</td>
+                                        <td>3er Pago</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <th scope="row">4</th>
+                                        <td>Agosto 12</td>
+                                        <td>$4,572.00</td>
+                                        <td>Pago final</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p>Tasa de interés de un 60% anual ajustado a 4 meses.</p>
 
-                            <div class="row">
-                               
-                               
-                                <hr/>
-                                <div class="col-xs-4 col-md-4">
-                                    <a class="btn btn-default btn-block" href="#pasoDosCuotas" data-toggle="tab" aria-expanded="true">
-                                        <span class="panel-title"> Volver</span>
-                                    </a>
-                                </div>
+                                <div class="row">
+                                    <hr/>
+                                    <div class="col-xs-4 col-md-4"></div>
+                                    <div class="col-xs-4 col-md-4"></div>
                                     <div class="col-xs-4 col-md-4">
-
+                                        <a class="btn btn-warning btn-block" href="#pasoDosCuotas" data-toggle="tab" aria-expanded="false">
+                                            <span class="panel-title">Deseo aplicar</span>
+                                        </a>
                                     </div>
-                                    <div class="col-xs-4 col-md-4">
-                                        <button type="button" class="btn btn-success btn-block" data-dismiss="modal" onclick="recargar()">Aceptar</button>
-                                    </div>
-                               
-                            </div><!--row-->
-                            
-                        </div><!--pasoTresCuotas tab-->
-
-                        <div class="tab-pane fade" id="pasoDosCuotas">
-                            <p>Añadir documento de indentidad nacional.</p>
-                            <div class="jumbotron" id="cedulaFront">
-                                
-                                  <div class="text-center"><label id="import-manual-trigger" class="btn btn-default btn-lg">Subir foto delantera<input type="file" id="import-file-select" class="hidden"></label></div>
-                                  
-                            </div>
-                            <hr/>
-                            <div class="jumbotron" id="cedulaBack">
-                                
-                                <div class="text-center"><label id="import-manual-trigger" class="btn btn-default btn-lg">Subir foto trasera<input type="file" id="import-file-select" class="hidden"></label></div>
-                                
-                          </div>
-
-                            <div class="row">
-                               
-                                <hr/>
-                                <div class="col-xs-4 col-md-4">
-                                    <a class="btn btn-default btn-block" href="#pasoUnoCuotas" data-toggle="tab" aria-expanded="true">
-                                        <span class="panel-title"> Volver</span>
-                                    </a>
                                 </div>
-                                <div class="col-xs-4 col-md-4">
 
-                                </div>
-                                <div class="col-xs-4 col-md-4">
-                                    <a class="btn btn-warning btn-block" href="#pasoTresCuotas" data-toggle="tab" aria-expanded="true">
-                                        <span class="panel-title"> Continuar</span>
-                                    </a>
-                                </div>
-                                
-                               
-                            </div><!--row-->
-
-                        </div><!--pasoDosCuotas-->
-
-                        <div class="tab-pane fade active in" id="pasoUnoCuotas">
-                            <p>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</p>
-                            <table class="table text-warning">
-                                <!--<caption>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</caption>-->
-                                <thead>
-                                <tr>
-                                    <th>CUOTA #</th>
-                                    <th>FECHA</th>
-                                    <th>MONTO</th>
-                                    <th>DESCRIPCIÓN</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr class="warning">
-                                    <th class="" scope="row">1</th>
-                                    <td>Hoy</td>
-                                    <td>$5,832.00</td>
-                                    <td>Incluye cargos por servicio</td>
-                                </tr>
-                                <tr class="warning">
-                                    <th scope="row">2</th>
-                                    <td>Junio 11</td>
-                                    <td>$4,572.00</td>
-                                    <td>2do Pago</td>
-                                </tr>
-                                <tr class="warning">
-                                    <th scope="row">3</th>
-                                    <td>Julio 12</td>
-                                    <td>$4,572.00</td>
-                                    <td>3er Pago</td>
-                                </tr>
-                                <tr class="warning">
-                                    <th scope="row">4</th>
-                                    <td>Agosto 12</td>
-                                    <td>$4,572.00</td>
-                                    <td>Pago final</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <p>Tasa de interés de un 60% anual ajustado a 4 meses.</p>
-
-                            <div class="row">
-                                <hr/>
-                                <div class="col-xs-4 col-md-4"></div>
-                                <div class="col-xs-4 col-md-4"></div>
-                                <div class="col-xs-4 col-md-4">
-                                    <a class="btn btn-warning btn-block" href="#pasoDosCuotas" data-toggle="tab" aria-expanded="false">
-                                        <span class="panel-title">Deseo aplicar</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div><!--pasoUnoCuotas-->
-                     
-                    </div><!--tab-content-->
-             
-
-                </div><!--modal-body-cuotas-->
-                <div class="modal-footer hidden">
-                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-warning" data-dismiss="modal">Continuar</button>-->
+                            </div><!--pasoUnoCuotas-->
+                        
+                        </div><!--tab-content-->
                 
 
-          
+                    </div><!--modal-body-cuotas-->
+                    <div class="modal-footer hidden">
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Continuar</button>-->
+                    
+
+            
 
 
+                    </div>
                 </div>
-            </div>
-            </div>
+                </div>
+            </div><!--modal Cuotas-->
+
+             <!-- Modal Cuotas Info-->
+             <div class="modal modal-blur fade" id="modalCuotasInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                    <svg width="100%" height="45" viewBox="0 0 108 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.8777 25.4676H15.9281V22.8345H15.8417C14.3309 25.9856 11.3093 26.2446 9.45323 26.2446C7.94244 26.2446 4.40288 25.8993 2.20144 23.1367C0.258993 20.7194 0 18.9496 0 15.5827V0.863312H7.38129V14.5036C7.38129 16.187 7.38129 19.4245 11.3093 19.4245C13.4245 19.4245 15.5396 18.3022 15.5396 14.4173V0.863312H22.8777V25.4676Z" fill="#EF4223"></path>
+                        <path d="M50.072 17.741C48.8633 20.5036 47.1367 22.6187 45.0648 24.0432C43.036 25.5108 40.5756 26.2446 38.072 26.2446C31.036 26.2446 25.036 20.5036 25.036 13.2086C24.9928 6.34532 30.3885 0 37.8993 0C45.4101 0 50.8921 5.95683 50.8921 13.4676C50.8921 14.4604 50.8058 14.8489 50.7194 15.4101H32.2446C32.6763 18.3453 35.1367 20.0719 38.0288 20.0719C40.2734 20.0719 41.482 19.036 42.518 17.7842H50.072V17.741ZM43.554 10.446C43.2518 8.97842 41.7842 6.21583 37.9425 6.21583C34.1439 6.21583 32.6763 8.97842 32.331 10.446H43.554Z" fill="#EF4223"></path>
+                        <path d="M53.0935 0.863326H60V3.58275H60.0432H60.1295C61.5971 1.72663 64.0144 0.0431824 67.813 0.0431824C76.5755 0.0431824 79.8561 7.72663 79.8561 13.4245C79.8561 20.5036 74.8921 26.3309 67.8561 26.3309C63.4101 26.3309 61.3381 24.2158 60.4317 23.2662V33.6691H53.0935V0.863326ZM72.4748 13.1655C72.4748 10.2302 70.3597 6.86332 66.3022 6.86332C62.2446 6.86332 60.1295 10.2302 60.1295 13.1655C60.1295 16.2734 62.4173 19.4245 66.3022 19.4245C70.1871 19.4245 72.4748 16.2734 72.4748 13.1655Z" fill="#EF4223"></path>
+                        <path d="M107.957 25.4676H100.576V22.7914H100.489C99.2374 25.2086 96.1727 26.2878 93.2806 26.2878C85.4676 26.2878 80.8921 20.1583 80.8921 13.1223C80.9353 5.05036 86.7626 0 93.3237 0C97.3813 0 99.6259 1.94245 100.532 3.45324H100.619V0.863309H108V25.4676H107.957ZM94.446 19.4245C99.0648 19.4245 100.619 15.5396 100.619 13.1223C100.619 10.1439 98.5899 6.86331 94.4029 6.86331C90.1727 6.86331 88.3166 10.4029 88.3166 13.2086C88.3166 15.5396 90 19.4245 94.446 19.4245Z" fill="#EF4223"></path>
+                        <path d="M15.21 34.56C8.57999 34.56 3.89999 39.45 3.89999 45.96C3.89999 52.5 8.57999 57.39 15.21 57.39C18.42 57.39 21.03 56.43 23.22 54.03L20.37 50.7C19.2 52.11 17.49 53.22 15.21 53.22C11.16 53.22 8.51999 50.16 8.51999 45.96C8.51999 41.76 11.16 38.73 15.21 38.73C17.46 38.73 19.14 39.81 20.31 41.19L23.19 37.86C21.06 35.67 18.69 34.56 15.21 34.56Z" fill="black"></path>
+                        <path d="M39.1992 41.79H34.7892V51.36C34.1892 52.29 33.3192 53.16 31.8792 53.16C30.3792 53.16 29.5392 52.02 29.5392 50.37V41.79H25.1292V50.61C25.1292 54.69 27.0192 57.3 30.6192 57.3C32.8092 57.3 34.2192 56.46 35.0292 55.35L35.2392 57H39.1992V41.79Z" fill="black"></path>
+                        <path d="M49.9931 41.49C45.3731 41.49 42.0131 44.88 42.0131 49.44C42.0131 54 45.3731 57.3 49.9931 57.3C54.6131 57.3 58.0331 54 58.0331 49.44C58.0331 44.88 54.6131 41.49 49.9931 41.49ZM49.9931 45.33C52.0631 45.33 53.5631 47.1 53.5631 49.44C53.5631 51.75 52.0631 53.46 49.9931 53.46C47.9531 53.46 46.4531 51.75 46.4531 49.44C46.4531 47.1 47.9531 45.33 49.9931 45.33Z" fill="black"></path>
+                        <path d="M66.2798 36.75H61.8698V41.79H59.1398V45.51H61.8698V51.33C61.8698 55.17 64.2398 57.3 67.9598 57.3C69.5198 57.3 70.6298 56.85 71.4398 56.37L70.3298 52.89C69.9098 53.13 69.2798 53.34 68.3798 53.34C67.1198 53.34 66.2798 52.59 66.2798 51.27V45.51H70.6298V41.79H66.2798V36.75Z" fill="black"></path>
+                        <path d="M79.1447 41.49C75.0947 41.49 72.3647 44.85 72.3647 49.41C72.3647 53.97 75.0947 57.3 79.1447 57.3C81.3347 57.3 82.8047 56.4 83.5847 55.32L83.8247 57H87.7847V41.79H83.8247L83.5847 43.5C82.8047 42.39 81.3347 41.49 79.1447 41.49ZM80.2247 45.33C81.7547 45.33 82.6847 46.17 83.3447 47.25V51.57C82.6847 52.65 81.7547 53.46 80.2247 53.46C78.2147 53.46 76.8047 51.9 76.8047 49.41C76.8047 46.89 78.2147 45.33 80.2247 45.33Z" fill="black"></path>
+                        <path d="M97.5166 41.49C93.4966 41.49 91.1266 43.44 91.1266 46.47C91.1266 48.84 92.6866 50.04 96.0166 50.85C98.0566 51.33 98.5966 51.75 98.5966 52.56C98.5966 53.43 97.7866 53.85 96.4366 53.85C94.7266 53.85 93.2866 53.19 92.2666 52.32L90.5866 55.47C91.8766 56.58 94.0966 57.3 96.4066 57.3C100.517 57.3 103.037 55.29 103.037 52.26C103.037 49.98 101.477 48.54 98.2666 47.76C96.1066 47.25 95.5366 46.95 95.5366 46.17C95.5366 45.36 96.2266 44.97 97.5166 44.97C99.0466 44.97 100.277 45.57 101.147 46.26L102.797 43.14C101.627 42.12 99.6166 41.49 97.5166 41.49Z" fill="black"></path>
+                    </svg>
+
+
+
+                    </div>
+                
+                        <div class="modal-body">
+
+                            <div class="" id="pasoUnoCuotasInfo">
+                                <p>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</p>
+                                <table class="table text-warning">
+                                    <!--<caption>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</caption>-->
+                                    <thead>
+                                    <tr>
+                                        <th>CUOTA #</th>
+                                        <th>FECHA</th>
+                                        <th>MONTO</th>
+                                        <th>DESCRIPCIÓN</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="warning">
+                                        <th class="" scope="row">1</th>
+                                        <td>Hoy</td>
+                                        <td>$5,832.00</td>
+                                        <td>Incluye cargos por servicio</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <th scope="row">2</th>
+                                        <td>Junio 11</td>
+                                        <td>$4,572.00</td>
+                                        <td>2do Pago</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <th scope="row">3</th>
+                                        <td>Julio 12</td>
+                                        <td>$4,572.00</td>
+                                        <td>3er Pago</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <th scope="row">4</th>
+                                        <td>Agosto 12</td>
+                                        <td>$4,572.00</td>
+                                        <td>Pago final</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p>Tasa de interés de un 60% anual ajustado a 4 meses.</p>
+
+                               
+
+                            </div><!--pasoUnoCuotasInfo-->
+                        
+                        </div><!--tab-content-->
+                
+
+                    </div><!--modal-body-cuotas-->
+                </div>
             </div><!--modal Cuotas-->
 
 
