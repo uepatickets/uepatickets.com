@@ -8076,14 +8076,14 @@
         </div><!-- METODO DE ENTREGA END -->
     
         <div class="list-group-item">
-            <table id="subTotalCuotas" data-testid="" class="a-normal small-line-height">
+            <table id="subTotalCuotasTable" data-testid="" class="a-normal small-line-height">
                 <tbody>
                     <tr data-testid="" class="order-summary-unidenfitied-style">
                         <td class="a-text-left">
-                            <span>Sub Total:</span>
+                            <span id="primeraCuota">Sub Total:</span>
                         </td>
                         <td class="a-text-right a-align-bottom aok-nowrap">
-                            <span id="ContentPlaceHolder1_lblSubTotal">RD$15,240.00</span>
+                            <span id="subTotalCuotas">RD$15,240.00</span>
                         </td>
                     </tr>
     
@@ -8092,7 +8092,7 @@
                             <span>Cargo por Servicio:</span>
                         </td>
                         <td class="a-text-right a-align-bottom aok-nowrap">
-                            <span id="ContentPlaceHolder1_lblCargoPorServicio">RD$1,260.00</span>
+                            <span id="cargoPorServicio">RD$1,260.00</span>
                         </td>
                     </tr>
     
@@ -8119,11 +8119,25 @@
                             <span>ORDEN TOTAL:</span>
                         </td>
                         <td class="" style="font-weight: bold; float: right;">
-                            <span id="ContentPlaceHolder1_lblGranTotal">RD$16,500.00</span>
+                            <span id="ordenTotal">RD$16,500.00</span>
                         </td>
                     </tr>
                 </tbody>
             </table>
+
+
+            <script type="text/javascript">
+                //Función recargar que cambia lo que hay en id="subTotalCuotas" por el contenido nuevo.
+                  function recargar(){
+                    document.getElementById("primeraCuota").innerHTML = "Sub Total 1ra Cuota:";
+                      document.getElementById("subTotalCuotas").innerHTML = "RD$4,562.00";
+                      document.getElementById("cargoPorServicio").innerHTML = "RD$1,260.00";
+                      document.getElementById("ordenTotal").innerHTML = "RD$5,822.00";
+                  }
+                </script>
+
+    <!--<input type="button" value="Recargar" onclick="recargar()"/>-->
+
         </div>
 
 
@@ -8271,7 +8285,7 @@
 
                                     </div>
                                     <div class="col-xs-4 col-md-4">
-                                        <button type="button" class="btn btn-success btn-block" data-dismiss="modal">Aceptar</button>
+                                        <button type="button" class="btn btn-success btn-block" data-dismiss="modal" onclick="recargar()">Aceptar</button>
                                     </div>
                                
                             </div><!--row-->
@@ -8315,8 +8329,9 @@
                         </div><!--pasoDosCuotas-->
 
                         <div class="tab-pane fade active in" id="pasoUnoCuotas">
+                            <p>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</p>
                             <table class="table text-warning">
-                                <caption>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</caption>
+                                <!--<caption>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</caption>-->
                                 <thead>
                                 <tr>
                                     <th>CUOTA #</th>
