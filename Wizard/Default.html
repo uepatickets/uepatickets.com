@@ -8076,7 +8076,7 @@
         </div><!-- METODO DE ENTREGA END -->
     
         <div class="list-group-item">
-            <table data-testid="" class="a-normal small-line-height">
+            <table id="subTotalCuotas" data-testid="" class="a-normal small-line-height">
                 <tbody>
                     <tr data-testid="" class="order-summary-unidenfitied-style">
                         <td class="a-text-left">
@@ -8175,7 +8175,7 @@
                     </div>
                     <div class="col-8 col-xs-8 col-md-8">
                         <b>Calificas para Uepa Cuotas</b><br/>
-                        <small>Tus tickets en cómodas cuotas. <!--<a class="text-info" href="#">Más.</a>--></small>
+                        <small>Tus tickets en varios pagos. <!--<a class="text-info" href="#">Más.</a>--></small>
                    
                         <button type="button" class="btn btn-dark btn-xs btn-block mt-2" data-toggle="modal" data-target="#modalCuotas">Pagar en cuotas</button>
                     </div>
@@ -8241,6 +8241,26 @@
                             
                             <div class="row">
                                 <hr/>
+                                <div class="col-xs-12 col-md-12">
+
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                                <div class="material-switch pull-right" style="margin-left: 6px;">
+                                                    <input id="ContentPlaceHolder1_cbox1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbox1">
+                                                    <label for="ContentPlaceHolder1_cbox1" class="label-success"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label class="aceptar" style="margin-top: 6px; margin-left: 45px;">
+                                                   Aceptar Términos y Conficiones para proceder con el financiamiento.
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody></table><br/>
+
+
+                                </div>
                                 <div class="col-xs-4 col-md-4">
                                     <a class="btn btn-default btn-block" href="#pasoUnoCuotas" data-toggle="tab" aria-expanded="true">
                                         <span class="panel-title"> Volver</span>
@@ -8258,36 +8278,36 @@
                         </div><!--pasoDosCuotas tab-->
 
                         <div class="tab-pane fade active in" id="pasoUnoCuotas">
-                            <table class="table">
+                            <table class="table text-warning">
                                 <caption>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</caption>
                                 <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>CUOTA #</th>
                                     <th>FECHA</th>
                                     <th>MONTO</th>
                                     <th>DESCRIPCIÓN</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
+                                <tr class="warning">
+                                    <th class="" scope="row">1</th>
                                     <td>Hoy</td>
                                     <td>$5,832.00</td>
                                     <td>Incluye cargos por servicio</td>
                                 </tr>
-                                <tr>
+                                <tr class="warning">
                                     <th scope="row">2</th>
                                     <td>Junio 11</td>
                                     <td>$4,572.00</td>
                                     <td>2do Pago</td>
                                 </tr>
-                                <tr>
+                                <tr class="warning">
                                     <th scope="row">3</th>
                                     <td>Julio 12</td>
                                     <td>$4,572.00</td>
                                     <td>3er Pago</td>
                                 </tr>
-                                <tr>
+                                <tr class="warning">
                                     <th scope="row">4</th>
                                     <td>Agosto 12</td>
                                     <td>$4,572.00</td>
@@ -8295,7 +8315,7 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <caption>Tasa de interés de un 60% anual ajustado a 4 meses.</caption>
+                            <p>Tasa de interés de un 60% anual ajustado a 4 meses.</p>
 
                             <div class="row">
                                 <hr/>
@@ -8303,7 +8323,7 @@
                                 <div class="col-xs-4 col-md-4"></div>
                                 <div class="col-xs-4 col-md-4">
                                     <a class="btn btn-warning btn-block" href="#pasoDosCuotas" data-toggle="tab" aria-expanded="false">
-                                        <span class="panel-title">Aplicar</span>
+                                        <span class="panel-title">Deseo aplicar</span>
                                     </a>
                                 </div>
                             </div>
