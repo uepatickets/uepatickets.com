@@ -454,6 +454,12 @@
             border-color: #000 !important;
             transition: 0.2s;
         }
+        .btn-dark:focus {
+            color: #fff;
+            background-color: #000;
+            border-color: #000 !important;
+            transition: 0.2s;
+        }
 
         .btn-facebook {
             color: #fff;
@@ -8191,55 +8197,87 @@
                     <p><b>Uepa Cuotas</b> ofrece a nuestros clientes preferenciales financiar sus tickets, permitiéndoles pagar en cómodas cuotas.</p>
                 </div>-->
 
+              <!-- <ul class="nav nav-tabs">
+                    <li id="pasoUnoCuotas" class="active">
+                        <a href="#pasoUnoCuotas" data-toggle="tab" aria-expanded="true">
+                            <span class="panel-title"> pasoUnoCuotas</span>
+                        </a>
+                    </li>
+                    <li id="pasoDosCuotas" class="">
+                        <a href="#pasoDosCuotas" data-toggle="tab" aria-expanded="false">
+                                <span class="panel-title">pasoDosCuotas</span>
+                        </a>
+                    </li>
+                </ul>--> 
+
+
                 </div>
+            
                 <div class="modal-body">
                 
-                    <table class="table">
-                        <caption>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</caption>
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>FECHA</th>
-                            <th>MONTO</th>
-                            <th>DESCRIPCIÓN</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Hoy</td>
-                            <td>$5,832.00</td>
-                            <td>Incluye cargos por servicio</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Junio 11</td>
-                            <td>$4,572.00</td>
-                            <td>2do Pago</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Julio 12</td>
-                            <td>$4,572.00</td>
-                            <td>3er Pago</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td>Agosto 12</td>
-                            <td>$4,572.00</td>
-                            <td>Pago final</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <caption>Tasa de interés de un 60% anual ajustado a 4 meses.</caption>
+               
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="pasoDosCuotas">
+                            Paso Dos
+                        </div>
 
-
+                        <div class="tab-pane fade active in" id="pasoUnoCuotas">
+                            <table class="table">
+                                <caption>Divide tu pago en 4 fáciles cuotas cargado a tu tarjeta de crédito en forma automática.</caption>
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>FECHA</th>
+                                    <th>MONTO</th>
+                                    <th>DESCRIPCIÓN</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Hoy</td>
+                                    <td>$5,832.00</td>
+                                    <td>Incluye cargos por servicio</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Junio 11</td>
+                                    <td>$4,572.00</td>
+                                    <td>2do Pago</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Julio 12</td>
+                                    <td>$4,572.00</td>
+                                    <td>3er Pago</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Agosto 12</td>
+                                    <td>$4,572.00</td>
+                                    <td>Pago final</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <caption>Tasa de interés de un 60% anual ajustado a 4 meses.</caption>
+                        </div>
+                     
+                    </div><!--tab-content-->
              
 
                 </div><!--modal-body-cuotas-->
                 <div class="modal-footer">
-                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>-->
-                <button type="button" class="btn btn-warning" data-dismiss="modal">Continuar</button>
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Continuar</button>-->
+                <a class="btn btn-default" href="#pasoUnoCuotas" data-toggle="tab" aria-expanded="true">
+                    <span class="panel-title"> pasoUnoCuotas</span>
+                </a>
+
+                <a class="btn btn-warning" href="#pasoDosCuotas" data-toggle="tab" aria-expanded="false">
+                    <span class="panel-title">pasoDosCuotas</span>
+            </a>
+
+
                 </div>
             </div>
             </div>
