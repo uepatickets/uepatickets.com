@@ -1,4 +1,11 @@
-﻿.payments-table-cards{
+﻿.rounded {
+  border-radius: 18px !important;
+}
+.a {
+  cursor: pointer !important
+}
+
+.payments-table-cards{
     width:100%;
 }
 
@@ -44,6 +51,27 @@
 img.card-icon {
     height: 21px;
     width: 43px;
+}
+
+
+
+.btn-dark {
+  color: #eee !important;
+  background-color: #333 !important;
+  border-color: #333 !important;
+  transition: 0.2s;
+}
+.btn-dark:hover {
+  color: #fff !important;
+  background-color: #000 !important;
+  border-color: #000 !important;
+  transition: 0.2s;
+}
+.btn-dark:focus {
+  color: #fff !important;
+  background-color: #000 !important;
+  border-color: #000 !important;
+  transition: 0.2s;
 }
 
 /* The switch - the box around the slider */

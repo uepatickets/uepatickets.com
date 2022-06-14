@@ -4597,7 +4597,7 @@ input:checked + .slider:before {
                             <div class="col-md-4 col-xs-0"></div>
                             <div class="col-md-6 col-xs-6">
 
-          <a style="float:right;margin: 32px 0;" class="btn btn-dark btn-sm rounded" href="./contacto.html">+ Crear Evento</a>
+          <a style="float:right;margin: 32px 0;" class="btn btn-dark btn-sm rounded" href="./ficha.html">+ Crear Evento</a>
 
                             </div>
                             <div class="col-md-2 col-xs-6 litLogin">
@@ -4764,7 +4764,7 @@ input:checked + .slider:before {
                                         <th>Sección</th>
                                         <th>Precio por ticket</th>
                                         <th>Cantidad por sección</th>
-                                        <th>Tipo</th>
+                                        <th>Condición</th>
                                         <th></th>
                                       </tr>
                                     </thead>
@@ -4816,22 +4816,22 @@ input:checked + .slider:before {
                             
                             <div class="list-group list-group-flush">
                                 <div class="list-group-item">
-                                    Desea comprobante fiscal:
-                                            <label class="switch ">
+                                    <label for="comprobanteFiscal">Desea comprobante fiscal:</label>
+                                            <label class="switch" id="comprobanteFiscal">
                                             <input type="checkbox" class="primary">
                                             <span class="slider round"></span>
                                             </label>
                                 </div>
                                 <div class="list-group-item">
-                                    <span>¿Evento a la venta en línea con e-ticket?</span>
-                                            <label class="switch ">
+                                    <span>¿Evento a la venta sólo en línea con e-ticket?</span>
+                                            <label class="switch" id="ventaSoloOnline">
                                             <input type="checkbox" class="primary">
                                             <span class="slider round"></span>
                                             </label>
                                 </div>
                                 <div class="list-group-item">
                                     <span>¿Evento a la venta en línea y demás puntos con ticket físico?</span>
-                                            <label class="switch ">
+                                            <label class="switch" id="ventaOnlineFisico">
                                             <input type="checkbox" class="primary">
                                             <span class="slider round"></span>
                                             </label>

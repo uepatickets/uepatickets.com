@@ -79,7 +79,7 @@
     <!-- Fanpage -->
     <meta property="fb:admins" content="21003923568" />
 
-    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/main.css?ver=0.0.1" rel="stylesheet" />
     <link rel="icon" type="image/png" href="./images/UEPA_Favicon_72.png?ver=0.0.1">
     <link rel="shortcut icon" href="./images/UEPA_Favicon_72.png?ver=0.0.1">
     <link rel="apple-touch-icon" href="./images/UEPA_Favicon_72.png?ver=0.0.1">
@@ -101,15 +101,7 @@
 
 
     
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113869905-1"></script>
-    <script type="text/javascript">
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'UA-113869905-1');
-    </script>
     <script type="text/javascript" src='https://uepatickets.com/script/google-a.js?ver=1.0.0'></script>
     <script type="text/javascript" src='https://uepatickets.com/static/asset/js/jquery-1.12.2.min.js?ver=1.0.0'></script>
     <script type="text/javascript" src='https://uepatickets.com/Script/jquery-ui.min.js?ver=1.0.0'></script>
@@ -139,6 +131,9 @@
         -----------------------------------------------------------------------------
         ----------------------------------------------------------------------------- */
         svg#contacto-icon {margin: 6px;}
+        .a {
+            cursor: pointer !important
+        }
 
         .modal-dialog-centered {
             min-height: calc(100% - (1.75rem * 2));
@@ -899,8 +894,8 @@
         }
 
         .material-icons {
-            color: #bbb;
-            fill: #bbb;
+            color: #333;
+            fill: #333;
             text-transform: none;
             text-decoration: none;
             transition: all .3s ease-in-out;
@@ -916,16 +911,16 @@
         }
 
             .material-icons:hover {
-                color: #555;
-                fill: #555;
+                color: #111;
+                fill: #111;
                 text-transform: none;
                 text-decoration: none;
                 transition: all .3s ease-in-out
             }
 
             .material-icons:focus {
-                color: #555;
-                fill: #555;
+                color: #111;
+                fill: #111;
                 text-transform: none;
                 text-decoration: none;
                 transition: all .3s ease-in-out;
@@ -4593,14 +4588,10 @@
                     <div class="col-md-4 col-sm-4 col-xs-4">
 
                         <div class="row">
-                            <div class="col-md-8 col-xs-0"></div>
-                            <div class="col-md-2 col-xs-6" style="z-index:999;">
+                            <div class="col-md-4 col-xs-0"></div>
+                            <div class="col-md-6 col-xs-6">
 
-                                        <!--<span class="material-icons p9 icon-apps">
-                                        <svg fill="#999" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
-                                            <path d="M0 0h24v24H0z" fill="none"/>
-                                        </svg></span> -->
+                                <a style="float:right;margin: 32px 0;" class="btn btn-dark btn-sm rounded" href="./ficha.html">+ Crear Evento</a>
 
                             </div>
                             <div class="col-md-2 col-xs-6 litLogin">
@@ -4745,11 +4736,10 @@
 
 
     <style>
-        a:hover {cursor: auto;}
- 
+    
         ::-webkit-scrollbar {-webkit-appearance:none;width:7px;height:7px;}
         ::-webkit-scrollbar-thumb {border-radius:9px;background-color: rgba(0, 0, 0, .5);-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);}
-        .dropdown-header{display:block;white-space: normal;padding:0px 6px;font-size:12px;color:#777;}a{color:#555}.card-img-zoom{outline:none;transition:all .3s ease-in-out}.card-img-zoom:hover{opacity:.9;outline:none;transition:all .3s ease-in-out;-webkit-transform:scale(1.3);-ms-transform:scale(1.3);transform:scale(1.3)}.popular-eventdetail{max-width:360px;margin:9px auto}.currency{padding-left:12px}.ellipsis{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}th{display:none}.item-description{font-size:11px}@media screen and (min-width:769px){.promotor-icon{width:29px;height:29px;margin:0 0 3px 0;overflow:hidden;border-radius:20px}.ads-1{max-width:1180px;height:56px;overflow:hidden}.ads-2{max-width:1180px;height:50px;overflow:hidden;background:#FFF}.dia{font-size:21px;height:25px;font-weight:normal;color:#222;}.dia-semana{font-size:10px}.fecha-wrap{text-align:center;border-right:1px solid #edeef0;padding: 0px 6px;/*border-radius:2px;padding:1px 2px;max-width:81px;min-width:54px;*/}.mes{color:#ef522d;text-transform:uppercase;font-size:11px;height:10px}.funcion{margin:9px;font-size:16px;font-weight:700}.lugar{font-size:14px;line-height:16px;color:#555;}.horario{font-size:16px;font-weight:normal;color:#222;}.btn-comprar{float:right;/*max-width:120px;*/margin:9px 0;padding:9px;font-weight: bold;letter-spacing:2px;}.btn-icon{fill:#FFF;margin-right:9px;float:right;}.btn-icon:hover{fill:#FFF;}.h3-title{font-size:16px;font-weight:400;display:block;/*max-height:3.7rem;min-height:2em;*/overflow:hidden;/*line-height:1.8rem*/}.item-logo{overflow:hidden;border-radius:3px;}}@media screen and (max-width:768px){#dfooter {display: none !important;}.promotor-icon{width:24px;height:24px;margin:0 0 3px 0;overflow:hidden;border-radius:20px}.ads-1{max-width:760px;height:56px;overflow:hidden}.ads-2{max-width:760px;height:50px;overflow:hidden;background:#FFF}.dia{font-size:21px;height:25px;font-weight:normal;color:#222;}.dia-semana{font-size:9px}.fecha-wrap{text-align:center;border-right:1px solid #edeef0;padding: 0px 3px;/*border-radius:2px;padding:1px 2px;max-width:81px;min-width:54px;*/}.mes{color:#ef522d;text-transform:uppercase;font-size:10px;margin:2px;height:6px}.funcion{margin:9px;font-size:12px;font-weight:700}.lugar{font-size:9.5px;line-height:12px;color:#555;}.horario{font-size:12px;color:#222;font-weight:normal;}.btn-comprar{/*max-width:75px;*/float:right;font-weight: bold;font-size: 12px;letter-spacing:2px;}.btn-icon{fill:#FFF;margin-right:9px;float:right;}.btn-icon:hover{fill:#FFF;}.h3-title{font-size:16px;font-weight:400;display:block;/*max-height:3.7rem;min-height:2em;*/overflow:hidden;line-height:1.7rem}.item-logo{overflow:hidden;border-radius:3px;}.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{padding:3px 3px;line-height:1.42857143;vertical-align:middle;border-top:1px solid #ddd}}.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{padding:3px;line-height:1.42857143;vertical-align:middle;border-top:1px solid #fff}
+        .dropdown-header{display:block;white-space: normal;padding:0px 6px;font-size:12px;color:#777;}.card-img-zoom{outline:none;transition:all .3s ease-in-out}.card-img-zoom:hover{opacity:.9;outline:none;transition:all .3s ease-in-out;-webkit-transform:scale(1.3);-ms-transform:scale(1.3);transform:scale(1.3)}.popular-eventdetail{max-width:360px;margin:9px auto}.currency{padding-left:12px}.ellipsis{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}th{display:none}.item-description{font-size:11px}@media screen and (min-width:769px){.promotor-icon{width:29px;height:29px;margin:0 0 3px 0;overflow:hidden;border-radius:20px}.ads-1{max-width:1180px;height:56px;overflow:hidden}.ads-2{max-width:1180px;height:50px;overflow:hidden;background:#FFF}.dia{font-size:21px;height:25px;font-weight:normal;color:#222;}.dia-semana{font-size:10px}.fecha-wrap{text-align:center;border-right:1px solid #edeef0;padding: 0px 6px;/*border-radius:2px;padding:1px 2px;max-width:81px;min-width:54px;*/}.mes{color:#ef522d;text-transform:uppercase;font-size:11px;height:10px}.funcion{margin:9px;font-size:16px;font-weight:700}.lugar{font-size:14px;line-height:16px;color:#555;}.horario{font-size:16px;font-weight:normal;color:#222;}.btn-comprar{float:right;/*max-width:120px;*/margin:9px 0;padding:9px;font-weight: bold;letter-spacing:2px;}.btn-icon{fill:#FFF;margin-right:9px;float:right;}.btn-icon:hover{fill:#FFF;}.h3-title{font-size:16px;font-weight:400;display:block;/*max-height:3.7rem;min-height:2em;*/overflow:hidden;/*line-height:1.8rem*/}.item-logo{overflow:hidden;border-radius:3px;}}@media screen and (max-width:768px){#dfooter {display: none !important;}.promotor-icon{width:24px;height:24px;margin:0 0 3px 0;overflow:hidden;border-radius:20px}.ads-1{max-width:760px;height:56px;overflow:hidden}.ads-2{max-width:760px;height:50px;overflow:hidden;background:#FFF}.dia{font-size:21px;height:25px;font-weight:normal;color:#222;}.dia-semana{font-size:9px}.fecha-wrap{text-align:center;border-right:1px solid #edeef0;padding: 0px 3px;/*border-radius:2px;padding:1px 2px;max-width:81px;min-width:54px;*/}.mes{color:#ef522d;text-transform:uppercase;font-size:10px;margin:2px;height:6px}.funcion{margin:9px;font-size:12px;font-weight:700}.lugar{font-size:9.5px;line-height:12px;color:#555;}.horario{font-size:12px;color:#222;font-weight:normal;}.btn-comprar{/*max-width:75px;*/float:right;font-weight: bold;font-size: 12px;letter-spacing:2px;}.btn-icon{fill:#FFF;margin-right:9px;float:right;}.btn-icon:hover{fill:#FFF;}.h3-title{font-size:16px;font-weight:400;display:block;/*max-height:3.7rem;min-height:2em;*/overflow:hidden;line-height:1.7rem}.item-logo{overflow:hidden;border-radius:3px;}.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{padding:3px 3px;line-height:1.42857143;vertical-align:middle;border-top:1px solid #ddd}}.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{padding:3px;line-height:1.42857143;vertical-align:middle;border-top:1px solid #fff}
     </style>
 
 
@@ -10512,6 +10502,11 @@
 
     </nav>
 
+    <style>
+          .a {
+            cursor: pointer !important
+        }
+    </style>
 
 </body>
 </html>
