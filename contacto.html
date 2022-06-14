@@ -121,7 +121,91 @@
         Version: 1.0.3
         -----------------------------------------------------------------------------
         ----------------------------------------------------------------------------- */
-        svg#whatsapp-biz {margin: 6px;}
+
+        svg#contacto-icon {margin: 6px;}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 18px;
+  float:right;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input.default:checked + .slider {
+  background-color: #444;
+}
+input.primary:checked + .slider {
+  background-color: #ef4223;
+}
+input.success:checked + .slider {
+  background-color: #8bc34a;
+}
+input.info:checked + .slider {
+  background-color: #3de0f5;
+}
+input.warning:checked + .slider {
+  background-color: #FFC107;
+}
+input.danger:checked + .slider {
+  background-color: #f44336;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ef4223;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
 
         .table {
             width: 100%;
@@ -4705,15 +4789,46 @@
                 </div>
                 <hr/>
                 <div class="panel-body">
-                    <div class="col-md-12">
-                        <h4>Comentarios</h4>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <textarea placeholder="Envíe sus comentarios..." class="form-control" rows="3"></textarea>
+                    <div class="">
+                        <div class="col-12 col-xs-12 col-md-6">
+                            <h4>Opciones para la venta</h4>
+                            
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item">
+                                    Desea comprobante fiscal:
+                                            <label class="switch ">
+                                            <input type="checkbox" class="primary">
+                                            <span class="slider round"></span>
+                                            </label>
+                                </div>
+                                <div class="list-group-item">
+                                    <span>¿Evento a la venta en línea con e-ticket?</span>
+                                            <label class="switch ">
+                                            <input type="checkbox" class="primary">
+                                            <span class="slider round"></span>
+                                            </label>
+                                </div>
+                                <div class="list-group-item">
+                                    <span>¿Evento a la venta en línea y demás puntos con ticket físico?</span>
+                                            <label class="switch ">
+                                            <input type="checkbox" class="primary">
+                                            <span class="slider round"></span>
+                                            </label>
+                                </div>
+                            
+                            </div><!--list-group-->
+
+
+                        </div>
+                        <div class="col-12 col-xs-12 col-md-6">
+                            <h4>Comentarios</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <textarea placeholder="Envíe sus comentarios..." class="form-control" rows="3"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
                 <hr/>
                 <div class="panel-body">
@@ -4727,13 +4842,21 @@
                             </div>
                         </div>
                         <div class="form-group col-4 col-xs-4 col-md-3">
-                            <button type="submit" class="btn btn-warning btn-block">Guardar</button>
+                            <button type="button" id="myButton" data-loading-text="Guardando..."  class="btn btn-warning btn-block">Guardar</button>
+                            <script>
+                                $('#myButton').on('click', function () {
+                                  var $btn = $(this).button('loading')
+                                  // business logic...
+                                  $btn.button('reset')
+                                })
+                              </script>
                         </div>
                         <div class="form-group col-4 col-xs-4 col-md-3">
                             <button type="submit" class="btn btn-primary btn-block">Enviar</button>
                         </div>
                    </div> 
-                </div>
+                   
+                </div><!--panel-body-->
                 
             </form><!--panel-->
 
@@ -5297,34 +5420,32 @@
         </div>
     <!-- Modal ATC End -->
 
-    <!-- MESSENGER 2020 -->
+        <!-- CONTACTO Ventas -->
         <div class='' id='contacto-uepa-new' data-toggle="modal" data-target="#uepamessengerModal">
+            <svg id="contacto-icon" xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+                <path fill="#FFF" d="M18.333 35V32.208H32.208Q32.208 32.208 32.208 32.208Q32.208 32.208 32.208 32.208V19.833Q32.208 17.417 31.208 15.229Q30.208 13.042 28.521 11.375Q26.833 9.708 24.625 8.708Q22.417 7.708 20 7.708Q17.583 7.708 15.375 8.708Q13.167 9.708 11.479 11.375Q9.792 13.042 8.792 15.229Q7.792 17.417 7.792 19.833V30H6.667Q5.292 30 4.312 29.021Q3.333 28.042 3.333 26.667V23.333Q3.333 22.375 3.792 21.646Q4.25 20.917 5 20.458L5.125 18.25Q5.5 15.208 6.854 12.75Q8.208 10.292 10.229 8.583Q12.25 6.875 14.771 5.938Q17.292 5 20 5Q22.75 5 25.271 5.938Q27.792 6.875 29.792 8.604Q31.792 10.333 33.146 12.771Q34.5 15.208 34.875 18.208L35 20.375Q35.75 20.75 36.208 21.479Q36.667 22.208 36.667 23.083V26.917Q36.667 27.833 36.208 28.542Q35.75 29.25 35 29.625V32.208Q35 33.375 34.188 34.188Q33.375 35 32.208 35ZM15 23.042Q14.417 23.042 14.021 22.646Q13.625 22.25 13.625 21.667Q13.625 21.083 14.021 20.688Q14.417 20.292 15 20.292Q15.583 20.292 15.979 20.688Q16.375 21.083 16.375 21.667Q16.375 22.25 15.979 22.646Q15.583 23.042 15 23.042ZM25 23.042Q24.417 23.042 24.021 22.646Q23.625 22.25 23.625 21.667Q23.625 21.083 24.021 20.688Q24.417 20.292 25 20.292Q25.583 20.292 25.979 20.688Q26.375 21.083 26.375 21.667Q26.375 22.25 25.979 22.646Q25.583 23.042 25 23.042ZM10.042 20.75Q9.875 18.292 10.729 16.292Q11.583 14.292 13.021 12.896Q14.458 11.5 16.333 10.75Q18.208 10 20.083 10Q23.875 10 26.521 12.396Q29.167 14.792 29.75 18.375Q25.833 18.333 22.792 16.271Q19.75 14.208 18.125 10.917Q17.458 14.292 15.312 16.896Q13.167 19.5 10.042 20.75Z"/>
+            </svg> 
 
-            <svg id="whatsapp-biz" xmlns="http://www.w3.org/2000/svg" height="40" width="40"><path fill="#FFF" d="M18.333 35V32.208H32.208Q32.208 32.208 32.208 32.208Q32.208 32.208 32.208 32.208V19.833Q32.208 17.417 31.208 15.229Q30.208 13.042 28.521 11.375Q26.833 9.708 24.625 8.708Q22.417 7.708 20 7.708Q17.583 7.708 15.375 8.708Q13.167 9.708 11.479 11.375Q9.792 13.042 8.792 15.229Q7.792 17.417 7.792 19.833V30H6.667Q5.292 30 4.312 29.021Q3.333 28.042 3.333 26.667V23.333Q3.333 22.375 3.792 21.646Q4.25 20.917 5 20.458L5.125 18.25Q5.5 15.208 6.854 12.75Q8.208 10.292 10.229 8.583Q12.25 6.875 14.771 5.938Q17.292 5 20 5Q22.75 5 25.271 5.938Q27.792 6.875 29.792 8.604Q31.792 10.333 33.146 12.771Q34.5 15.208 34.875 18.208L35 20.375Q35.75 20.75 36.208 21.479Q36.667 22.208 36.667 23.083V26.917Q36.667 27.833 36.208 28.542Q35.75 29.25 35 29.625V32.208Q35 33.375 34.188 34.188Q33.375 35 32.208 35ZM15 23.042Q14.417 23.042 14.021 22.646Q13.625 22.25 13.625 21.667Q13.625 21.083 14.021 20.688Q14.417 20.292 15 20.292Q15.583 20.292 15.979 20.688Q16.375 21.083 16.375 21.667Q16.375 22.25 15.979 22.646Q15.583 23.042 15 23.042ZM25 23.042Q24.417 23.042 24.021 22.646Q23.625 22.25 23.625 21.667Q23.625 21.083 24.021 20.688Q24.417 20.292 25 20.292Q25.583 20.292 25.979 20.688Q26.375 21.083 26.375 21.667Q26.375 22.25 25.979 22.646Q25.583 23.042 25 23.042ZM10.042 20.75Q9.875 18.292 10.729 16.292Q11.583 14.292 13.021 12.896Q14.458 11.5 16.333 10.75Q18.208 10 20.083 10Q23.875 10 26.521 12.396Q29.167 14.792 29.75 18.375Q25.833 18.333 22.792 16.271Q19.75 14.208 18.125 10.917Q17.458 14.292 15.312 16.896Q13.167 19.5 10.042 20.75Z"/></svg> 
         </div>
     
-    <!-- Modal Messenger -->
+    <!-- Modal Contacto Ventas -->
         <div class="modal modal-full fade" id="uepamessengerModal" role="dialog">
             <div class="modal-dialog modal-dialog-full" style='max-width:700px;'>
                 <div class="modal-content modal-content-full" style="margin: 6px; border: 0px solid #FFF;">
                     <div class="modal-header modal-header-full">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <!--<h3 class="modal-title">Escríbenos</h3>-->
+                        <h3 class="modal-title">Ficha de Inscripción Evento</h3>
                     </div>
                     <div class="modal-body modal-body-full">
                     
 
-                
+                BODY
 
                         
                     </div>
-                    <div class="modal-footer modal-footer-full hidden">
-                        <div class="row">
-                            <div class="col-md-4 col-xs-4"><a href="mailto:contacto@uepa.com" class="btn btn-block"><span class="glyphicon glyphicon-envelope"></span></a></div>
-                            <div class="col-md-4 col-xs-4"><a href="tel:809-620-8372" class="btn btn-block"><span class="glyphicon glyphicon-phone-alt"></span></a></div>
-                            <div class="col-md-4 col-xs-4"><a href="./puntoventas.html" class="btn btn-block"><span class="glyphicon glyphicon-map-marker"></span></a></div>
-                        </div>
-                        <!-- row -->
+                    <div class="modal-footer modal-footer-full ">
+                        
+                        FOOTER
 
                     </div>
                 </div>
