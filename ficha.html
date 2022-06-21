@@ -4760,14 +4760,25 @@ input:checked + .slider:before {
                         <div class="col-xs-12 col-md-3">
                             <div class="list-group-item">
                                 
-                                <label onclick="myFunction()" for="comprobanteFiscalBtn">¿Desea comprobante fiscal?</label>
-                                        <label onclick="myFunction()" class="switch" for="comprobanteFiscalBtn">
-                                        <input type="checkbox" id="comprobanteFiscalBtn" class="primary">
-                                        <span class="slider round"></span>
-                                        </label>
+                                <label onclick="functionPj()" for="comprobanteFiscalPj">Persona Jurídica</label>
+                                    <label onclick="functionPj()" class="switch" for="comprobanteFiscalPj">
+                                    <input type="checkbox" id="comprobanteFiscalPj" class="primary">
+                                    <span class="slider round"></span>
+                                </label>
+
+                            </div>
+                            <div class="list-group-item">
+                                
+                                <label onclick="functionPf()" for="comprobanteFiscalPf">Persona Física</label>
+                                    <label onclick="functionPf()" class="switch" for="comprobanteFiscalPf">
+                                    <input type="checkbox" id="comprobanteFiscalPf" class="primary">
+                                    <span class="slider round"></span>
+                                </label>
+
                             </div>
                         </div>
-                        <div style="display: none;" id="comprobanteFiscal">
+                        <!-- Persona Jurídica -->
+                        <div style="display: none;" id="comprobantePj">
                             <div class="form-group col-xs-8 col-8 col-md-3">
                                 <label for="inputCompaniaPromotora">Compañía Promotora</label>
                                 <input type="text" class="form-control" id="inputCompaniaPromotora" placeholder="Nombre Compañía Promotora">
@@ -4781,18 +4792,45 @@ input:checked + .slider:before {
                                 <input type="text" class="form-control" id="inputDireccion" placeholder="Dirección">
                             </div>
                         </div>
-
                         <script>
-                            function myFunction() {
-                              var checkBox = document.getElementById("comprobanteFiscalBtn");
-                              var text = document.getElementById("comprobanteFiscal");
+                            function functionPj() {
+                              var checkBox = document.getElementById("comprobanteFiscalPj");
+                              var text = document.getElementById("comprobantePj");
                               if (checkBox.checked == true){
                                 text.style.display = "block";
                               } else {
                                  text.style.display = "none";
                               }
                             }
-                            </script>
+                        </script>
+                        <!-- end Persona Jurídica -->
+                        <!-- Persona Física -->
+                        <div style="display: none;" id="comprobantePf">
+                            <div class="form-group col-xs-8 col-8 col-md-3">
+                                <label for="inputNombrePromotor">Nombre Promotor</label>
+                                <input type="text" class="form-control" id="inputNombrePromotor" placeholder="Nombre Promotor">
+                            </div>
+                            <div class="form-group col-xs-4 col-4 col-md-2">
+                                <label for="inputCedula">Cedula / Passport</label>
+                                <input type="text" class="form-control" id="inputCedula" placeholder="Cedula / Passport">
+                            </div>
+                            <div class="form-group col-xs-12 col-12 col-md-4">
+                                <label for="inputDireccion">Dirección</label>
+                                <input type="text" class="form-control" id="inputDireccion" placeholder="Dirección">
+                            </div>
+                        </div>
+                        <script>
+                            function functionPf() {
+                            var checkBox = document.getElementById("comprobanteFiscalPf");
+                            var text = document.getElementById("comprobantePf");
+                            if (checkBox.checked == true){
+                                text.style.display = "block";
+                            } else {
+                                text.style.display = "none";
+                            }
+                            }
+                        </script>
+                        <!-- end Persona Física -->
 
                     </div>
                 </div>
@@ -4861,13 +4899,7 @@ input:checked + .slider:before {
                             <h4>Opciones para la venta</h4>
                             
                             <div class="list-group list-group-flush">
-                                <!--<div class="list-group-item">
-                                    <label for="comprobanteFiscal">Desea comprobante fiscal:</label>
-                                            <label class="switch" id="comprobanteFiscal">
-                                            <input type="checkbox" class="primary">
-                                            <span class="slider round"></span>
-                                            </label>
-                                </div>-->
+   
                                 <div class="list-group-item">
                                     <label for="ventaSoloOnline">¿Evento a la venta sólo en línea con e-ticket?</label>
                                             <label class="switch" for="ventaSoloOnline">
