@@ -4811,8 +4811,8 @@ input:checked + .slider:before {
                                 <input type="text" class="form-control" id="inputNombrePromotor" placeholder="Nombre Promotor">
                             </div>
                             <div class="form-group col-xs-4 col-4 col-md-2">
-                                <label for="inputCedula">Cedula / Passport</label>
-                                <input type="text" class="form-control" id="inputCedula" placeholder="Cedula / Passport">
+                                <label for="inputCedula">Cedula / Pasaporte</label>
+                                <input type="text" class="form-control" id="inputCedula" placeholder="Cedula / Pasaporte">
                             </div>
                             <div class="form-group col-xs-12 col-12 col-md-4">
                                 <label for="inputDireccion">Dirección</label>
@@ -4902,24 +4902,121 @@ input:checked + .slider:before {
    
                                 <div class="list-group-item">
                                     <label for="ventaSoloOnline">¿Evento a la venta sólo en línea con e-ticket?</label>
-                                            <label class="switch" for="ventaSoloOnline">
-                                            <input type="checkbox" id="ventaSoloOnline" class="primary">
-                                            <span class="slider round"></span>
-                                            </label>
+                                        <label class="switch" for="ventaSoloOnline">
+                                        <input type="checkbox" id="ventaSoloOnline" class="primary">
+                                        <span class="slider round"></span>
+                                    </label>
                                 </div>
                                 <div class="list-group-item">
                                     <label for="ventaOnlineFisico">¿Evento a la venta en línea y demás puntos con ticket físico?</label>
-                                            <label class="switch" for="ventaOnlineFisico">
-                                            <input type="checkbox" id="ventaOnlineFisico" class="primary">
-                                            <span class="slider round"></span>
-                                            </label>
+                                        <label class="switch" for="ventaOnlineFisico">
+                                        <input type="checkbox" id="ventaOnlineFisico" class="primary">
+                                        <span class="slider round"></span>
+                                    </label>
                                 </div>
-                            
+                                <div class="list-group-item">
+                                    <label for="descuento">¿Habrá algún tipo de descuento?</label>
+                                        <label class="switch" for="descuento">
+                                        <input type="checkbox" id="descuento" class="primary">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
                             </div><!--list-group-->
 
 
                         </div>
                         <div class="col-12 col-xs-12 col-md-6">
+                            <h4>Opciones para el cobro</h4>
+                         <!--   -	Indicar forma en que requiere se le pague: 
+Cheque ______      Transferencia_____x___ 
+
+(Especificar número de cuenta, banco al que pertenece y su cédula).
+-->
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                                            
+                                <label onclick="functionCheque()" for="cobrarCheque"><b>Cheque</b></label>
+                                    <label onclick="functionCheque()" class="switch" for="cobrarCheque">
+                                    <input type="checkbox" id="cobrarCheque" class="primary">
+                                    <span class="slider round"></span>
+                                </label>
+
+
+                                    <!-- Cheque -->
+                                    <div style="display: none;" id="cobrarChequeDiv">
+                                        <div class="form-group col-xs-6 col-6 col-md-6">
+                                            <label for="inputNombrePromotor">Nombre Promotor</label>
+                                            <input type="text" class="form-control" id="inputNombrePromotor" placeholder="Nombre Promotor">
+                                        </div>
+                                        <div class="form-group col-xs-6 col-6 col-md-6">
+                                            <label for="inputCedula">Cedula / Pasaporte</label>
+                                            <input type="text" class="form-control" id="inputCedula" placeholder="Cedula / Pasaporte">
+                                        </div>
+                                    </div>
+                                    <script>
+                                        function functionCheque() {
+                                        var checkBox = document.getElementById("cobrarCheque");
+                                        var text = document.getElementById("cobrarChequeDiv");
+                                            if (checkBox.checked == true){
+                                                text.style.display = "block";
+                                                text.style.height = "60px";
+                                                text.style.margin = "9px";
+                                            } else {
+                                                text.style.display = "none";
+                                            }
+                                        }
+                                    </script>
+                                    <!-- end Cheque -->
+
+
+
+                            </div><!--list-group-item-->
+                            <div class="list-group-item">
+                                <label onclick="functionTransferencia()" for="cobrarTransferencia"><b>Transferencia</b></label>
+                                    <label onclick="functionTransferencia()" class="switch" for="cobrarTransferencia">
+                                    <input type="checkbox" id="cobrarTransferencia" class="primary">
+                                    <span class="slider round"></span>
+                                </label>
+
+
+
+                                <!-- Transferencia -->
+                                <div style="display: none;" id="cobrarTransferenciaDiv">
+                                    <div class="form-group col-xs-6 col-6 col-md-6">
+                                        <label for="numeroCuenta">Número de cuenta</label>
+                                        <input type="text" class="form-control" id="numeroCuenta" placeholder="Número cuenta de banco">
+                                    </div>
+                                    <div class="form-group col-xs-6 col-6 col-md-6">
+                                        <label for="inputCedula">Cedula / Pasaporte</label>
+                                        <input type="text" class="form-control" id="inputCedula" placeholder="Cedula / Pasaporte">
+                                    </div>
+                                </div>
+                                <script>
+                                    function functionTransferencia() {
+                                    var checkBox = document.getElementById("cobrarTransferencia");
+                                    var text = document.getElementById("cobrarTransferenciaDiv");
+                                        if (checkBox.checked == true){
+                                            text.style.display = "block";
+                                            text.style.height = "60px";
+                                            text.style.margin = "9px";
+                                        } else {
+                                            text.style.display = "none";
+                                        }
+                                    }
+                                </script>
+                                <!-- end Transferencia -->
+
+                                <br/>
+                                <small>Especificar número de cuenta, banco al que pertenece y su cédula</small>
+                            </div><!--list-group-item-->
+                        </div><!--list-group-->
+
+
+
+
+                        </div>
+                        
+                        <div class="col-12 col-xs-12 col-md-12">
                             <h4>Comentarios</h4>
                             <div class="form-row">
                                 <div class="form-group">
@@ -4933,7 +5030,7 @@ input:checked + .slider:before {
                 <div class="panel-body">
                     <div class="form-row">
                         <div class="form-group col-4 col-xs-4 col-md-6">
-                            <div class="form-check">
+                            <div class="form-check d-none hidden">
                                 <input class="form-check-input" type="checkbox" id="gridCheck">
                                 <label class="form-check-label" for="gridCheck">
                                 Aceptar condiciones de servicio
@@ -4941,7 +5038,7 @@ input:checked + .slider:before {
                             </div>
                         </div>
                         <div class="form-group col-4 col-xs-4 col-md-3">
-                            <button type="button" id="myButton" data-loading-text="Guardando..."  class="btn btn-warning btn-block">Guardar</button>
+                            <button type="button" id="myButton" data-loading-text="Guardando..."  class="btn btn-warning btn-block d-none hidden">Guardar</button>
                             <script>
                                 $('#myButton').on('click', function () {
                                   var $btn = $(this).button('loading')
