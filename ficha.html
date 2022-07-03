@@ -10,15 +10,7 @@
 
 
 
-
-
-
-
-    <!-- Studio23 -->
-    <!--<meta name="facebook-domain-verification" content="ed1owl2ud606lutjzo3jpeqqeiucfd" />-->
-    <meta name="facebook-domain-verification" content="6hajusjbrze3zta4xphujmtx4sc5rf" />
-
-    <title>Contacto | Uepa Tickets</title>
+    <title>Ficha | Uepa Tickets</title>
 	<link rel="manifest" href="./manifest.json?ver=0.0.5">
     
     <meta http-equiv='cache-control' content='no-cache'>
@@ -5643,114 +5635,143 @@ Cheque ______      Transferencia_____x___
                                 <div class="wizard p-5">
                                     <div class="wizard-inner">
                                         <div class="connecting-line"></div>
-                                        <ul class="nav nav-tabs" role="tablist">
-                                            <li role="presentation" class="active">
-                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"><span class="round-tab">1 </span> <i>Paso 1</i></a>
-                                            </li>
-                                         
-                                            <li role="presentation" class="disabled">
-                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab"><span class="round-tab">2</span> <i>Paso 2</i></a>
-                                            </li>
-                                            <li role="presentation" class="disabled">
-                                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span class="round-tab">3</span> <i>Paso 3</i></a>
-                                            </li>
-                                            <li role="presentation" class="disabled">
-                                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" aria-expanded="false"><span class="round-tab">4</span> <i>Paso 4</i></a>
-                                            </li>
-                                        </ul>
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active">
+                                                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"><span class="round-tab">1 </span> <i>Paso 1</i></a>
+                                                </li>
+                                            
+                                                <li role="presentation" class="disabled">
+                                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab"><span class="round-tab">2</span> <i>Paso 2</i></a>
+                                                </li>
+                                                <li role="presentation" class="disabled">
+                                                    <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span class="round-tab">3</span> <i>Paso 3</i></a>
+                                                </li>
+                                                <li role="presentation" class="disabled">
+                                                    <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" aria-expanded="false"><span class="round-tab">4</span> <i>Paso 4</i></a>
+                                                </li>
+                                            </ul>
                                         <hr/>
                                     </div>
                     
-                                    <form role="form" action="./index.html" class="login-box">
+                                    <div class="login-box">
                                         <div class="tab-content" id="main_form">
                                             <div class="tab-pane text-center active" role="tabpanel" id="step1">
-                                                <h4 class="text-center">Seleccione su caso</h4><p>Por favor seleccione su tipo de solicitud</p>
+                                                <h4 class="text-center">Seleccione su caso</h4>
+                                                <p>Por favor seleccione su tipo de solicitud</p>
                                                 
-                                                <br/><br/>
+                                                        <label for="reembolsos" class="btn btn-default btn-block000 mb-3 p-3">
+                                                            <input type="radio" id="reembolsos" value="Reembolsos">
+                                                            <p>Crédito / Reembolso</p>
+                                                        </label>
 
-                                                <div class="row">
-                                                        <div class="col-6 col-sm-6 col-md-6">
-                                                            <label for="reembolsos" class="btn btn-default btn-block rounded mb-3">
-                                                                <input type="radio" id="reembolsos" value="Reembolsos">
-                                                                    <p>Reembolsos</p>
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-6 col-sm-6 col-md-6">
-                                                            <label for="reenviarTickets" class="btn btn-default btn-block rounded mb-3">
-                                                                <input type="radio" id="reenviarTickets" value="Reenviar tickets">
-                                                                    <p>Reenviar tickets</p>
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-6 col-sm-6 col-md-6">
-                                                            <label for="cambiarAsientos" class="btn btn-default btn-block rounded mb-3">
-                                                                <input type="radio" id="cambiarAsientos" value="Cambiar asientos">
-                                                                    <p>Cambiar asientos</p>
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-6 col-sm-6 col-md-6">
-                                                            <label for="chatear" class="btn btn-default btn-block rounded mb-3" >
-                                                                <input type="radio" id="chatear" value="Chatear">
-                                                                
-                                                                    <p>Chatear</p>
-                                                            </label>
-                                                        </div>
-                                                </div><!--row-->
+                                                        <label for="reenviarTickets" class="disabled btn btn-default btn-block000 mb-3 p-3">
+                                                            <input type="radio" id="reenviarTickets" value="Reenviar tickets">
+                                                            <p>Reenviar tickets</p>
+                                                        </label>
 
-
-
+                                                        <label for="cambiarAsientos" class="disabled btn btn-default btn-block000 mb-3 p-3">
+                                                            <input type="radio" id="cambiarAsientos" value="Cambiar asientos">
+                                                            <p>Cambiar asientos</p>
+                                                        </label>
+    
+                                                        <label for="chatear" class="disabled btn btn-default btn-block000 mb-3 p-3" >
+                                                            <input type="radio" id="chatear" value="Chatear">
+                                                            <p>Chatear</p>
+                                                        </label>
+                                       
+                                                <hr/>
 
                                                 <ul class="list-inline pull-right">
+                                                  <!-- <li><button type="button" class="btn btn-default prev-step">Volver</button></li>
+                                                    <li><button type="button" class="btn btn-warning next-step skip-btn">Omitir</button></li>--> 
                                                     <li><button type="button" class="btn btn-primary next-step">Continuar</button></li>
                                                 </ul>
+
                                             </div>
                                           
                                             <div class="tab-pane" role="tabpanel" id="step2">
                                                 <h4 class="text-center">Paso 2</h4>
-                                                
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>Account Name *</label> 
-                                                        <input class="form-control" type="text" name="name" placeholder=""> 
+                                                <div class="row">
+                                                    <div class="col-md-6">
+
+                                                      <!-- <div class="form-group">
+                                                            <label>Motivo *</label> 
+                                                            <div class="dropdown">
+                                                                <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                                Seleccionar motivo <span class="caret"></span>
+                                                                </button>
+                                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                                <li><a href="#">Cancelación de evento</a></li>
+                                                                <li><a href="#">Posposición de evento</a></li>
+                                                                <li><a href="#">Modificación de evento</a></li>
+                                                                <li><a href="#">Doble cargo</a></li>
+                                                                <li role="separator" class="divider"></li>
+                                                                <li><a href="#">Inconveniente con la compra</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>--> 
+
+                                                        <label for="motivo">Motivo *</label>
+                                                        <select id="motivo" name="carlist" form="carform" class="form-control">
+                                                          <option value="">Seleccionar motivo...</option>
+                                                          <option value="cancelacion">Cancelación de evento</option>
+                                                          <option value="posposicion">Posposición de evento</option>
+                                                          <option value="modificacion">Modificación de evento</option>
+                                                          <option value="doblecargo">Doble cargo</option>
+                                                          <option value="inconveniente">Inconveniente con la compra</option>
+                                                        </select>
+
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>Demo</label> 
-                                                        <input class="form-control" type="text" name="name" placeholder=""> 
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Número de orden</label> 
+                                                            <input class="form-control" type="tel" name="name" placeholder="000000"> 
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>Inout</label> 
-                                                        <input class="form-control" type="text" name="name" placeholder=""> 
+                                                    <div class="col-12 col-xs-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Nombre</label> 
+                                                            <input class="form-control" type="text" name="name" placeholder="Nombre"> 
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>Information</label> 
-                                                        <div class="custom-file">
-                                                          <input type="file" class="custom-file-input" id="customFile">
-                                                          <label class="custom-file-label" for="customFile">Select file</label>
+                                                    <div class="col-12 col-xs-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Cédula / Pasaporte</label> 
+                                                            <input class="form-control" type="text" name="name" placeholder="Cédula / Pasaporte"> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-xs-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Celular *</label> 
+                                                            <input class="form-control" type="text" name="name" placeholder="Celular"> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-xs-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Correo</label> 
+                                                            <input class="form-control" type="text" name="name" placeholder="Correo"> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-xs-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Adjuntar</label> 
+                                                            <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="customFile">
+                                                            <label class="custom-file-label" for="customFile">Seleccionar archivo</label>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>Number *</label> 
-                                                        <input class="form-control" type="text" name="name" placeholder=""> 
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>Input Number</label> 
-                                                        <input class="form-control" type="text" name="name" placeholder=""> 
-                                                    </div>
-                                                </div>
+
+                                                <hr/>
+
                                                 <ul class="list-inline pull-right">
                                                     <li><button type="button" class="btn btn-default prev-step">Volver</button></li>
                                                     <li><button type="button" class="btn btn-warning next-step skip-btn">Omitir</button></li>
                                                     <li><button type="button" class="btn btn-primary next-step">Continuar</button></li>
                                                 </ul>
+
+
                                             </div>
                                             <div class="tab-pane" role="tabpanel" id="step3">
                                                 <h4 class="text-center">Paso 3</h4>
@@ -5884,28 +5905,30 @@ Cheque ______      Transferencia_____x___
                                                     </div>
                                                 </div>
                                                 
-                                                <ul class="list-inline pull-right">
-                                                    <li><button type="button" class="btn btn-default prev-step">Volver</button></li>
-                                                    <li><button type="button" class="btn btn-primary next-step">Continuar</button></li>
-                                                </ul>
-                                            </div>
-                                            <div class="tab-pane" role="tabpanel" id="step4">
-                                                <h4 class="text-center">Paso 4</h4>
-                                               
-                                                @GRACIAS
-                                                Nos pondremos en contacto...
+                                                <hr/>
 
                                                 <ul class="list-inline pull-right">
                                                     <li><button type="button" class="btn btn-default prev-step">Volver</button></li>
                                                     <li><button type="button" class="btn btn-warning next-step skip-btn">Omitir</button></li>
-                                                    <li><button type="submit" class="btn btn-primary next-step">Enviar</button></li>
+                                                    <li><button type="button" class="btn btn-primary next-step">Continuar</button></li>
                                                 </ul>
+                              
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step4">
+                                                <h4 class="text-center">Paso 4</h4>
+                                               
+                                                <p class="text-center">@GRACIAS<br/>
+                                                Nos pondremos en contacto...</p>
+
+                                    
                                             </div>
 
-                                            <div class="clearfix"></div>
+                            
+                                            
+                                            
                                         </div>
                                         
-                                    </form>
+                                    </div>
                                 </div><!--wizard-->
                           
                    

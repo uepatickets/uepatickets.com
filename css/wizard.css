@@ -133,7 +133,7 @@
     }
     .wizard .tab-pane {
         position: relative;
-        padding-top: 20px;
+        padding-top:6px;
     }
     .wizard h3 {
         margin-top: 0;
@@ -142,7 +142,7 @@
         font-size: 20px;
         text-align: center;
         font-weight: 500;
-        margin-bottom: 20px;
+        margin-bottom:6px;
     }
     .term-check{
         font-size: 14px;
