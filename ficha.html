@@ -5752,7 +5752,7 @@ Cheque ______      Transferencia_____x___
                                                             <input class="form-control" type="text" name="name" placeholder="Correo"> 
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-xs-12 col-md-6">
+                                                <!--   <div class="col-12 col-xs-12 col-md-6">
                                                         <div class="form-group">
                                                             <label>Adjuntar</label> 
                                                             <div class="custom-file">
@@ -5760,7 +5760,7 @@ Cheque ______      Transferencia_____x___
                                                             <label class="custom-file-label" for="customFile">Seleccionar archivo</label>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div>--> 
                                                 </div>
 
                                                 <hr/>
@@ -5775,135 +5775,45 @@ Cheque ______      Transferencia_____x___
                                             </div>
                                             <div class="tab-pane" role="tabpanel" id="step3">
                                                 <h4 class="text-center">Paso 3</h4>
-                                                <div class="all-info-container">
-                                                    <div class="list-content">
-                                                        <a href="#listone" data-toggle="collapse" aria-expanded="false" aria-controls="listone">Collapse 1 <i class="fa fa-chevron-down"></i></a>
-                                                        <div class="collapse" id="listone">
-                                                            <div class="list-box">
-                                                                <div class="row">
-                                                                    
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>First and Last Name *</label> 
-                                                                            <input class="form-control" type="text"  name="name" placeholder="" disabled="disabled"> 
-                                                                        </div>
-                                                                    </div>
-                                                                    
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>Phone Number *</label> 
-                                                                            <input class="form-control" type="text" name="name" placeholder="" disabled="disabled"> 
-                                                                        </div>
-                                                                    </div>
-                                                                    
-                                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-xs-12 col-md-6">
+                                                        <label for="motivo">Tipo de compra *</label>
+                                                        <select id="motivo" name="carlist" form="carform" class="form-control">
+                                                          <option value="">Seleccionar...</option>
+                                                          <option value="compraOnline">Compra online</option>
+                                                          <option value="compraFisica">Compra física</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 col-xs-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Adjuntar foto de tickets</label> 
+                                                            <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="customFile">
+                                                            <label class="custom-file-label" for="customFile">Seleccionar archivo</label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="list-content">
-                                                        <a href="#listtwo" data-toggle="collapse" aria-expanded="false" aria-controls="listtwo">Collapse 2 <i class="fa fa-chevron-down"></i></a>
-                                                        <div class="collapse" id="listtwo">
-                                                            <div class="list-box">
-                                                                <div class="row">
-                                                                    
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>Address 1 *</label> 
-                                                                            <input class="form-control" type="text" name="name" placeholder="" disabled="disabled"> 
-                                                                        </div>
-                                                                    </div>
-                                                                    
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>City / Town *</label> 
-                                                                            <input class="form-control" type="text" name="name" placeholder="" disabled="disabled"> 
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>Country *</label> 
-                                                                            <select name="country2" class="form-control" id="country2" disabled="disabled">
-                                                                                <option value="NG" selected="selected">Nigeria</option>
-                                                                                <option value="NU">Niue</option>
-                                                                                <option value="NF">Norfolk Island</option>
-                                                                                <option value="KP">North Korea</option>
-                                                                                <option value="MP">Northern Mariana Islands</option>
-                                                                                <option value="NO">Norway</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    
-                                                                    
-                                                                    
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>Legal Form</label> 
-                                                                            <select name="legalform2" class="form-control" id="legalform2" disabled="disabled">
-                                                                                <option value="" selected="selected">-Select an Answer-</option>
-                                                                                <option value="AG">Limited liability company</option>
-                                                                                <option value="GmbH">Public Company</option>
-                                                                                <option value="GbR">No minimum capital, unlimited liability of partners, non-busines</option>
-                                                                            </select> 
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>Business Registration No.</label> 
-                                                                            <input class="form-control" type="text" name="name" placeholder="" disabled="disabled"> 
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>Registered</label> 
-                                                                            <select name="vat2" class="form-control" id="vat2" disabled="disabled">
-                                                                                <option value="" selected="selected">-Select an Answer-</option>
-                                                                                <option value="yes">Yes</option>
-                                                                                <option value="no">No</option>
-                                                                            </select> 
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>Seller</label> 
-                                                                            <input class="form-control" type="text" name="name" placeholder="" disabled="disabled"> 
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-12">
-                                                                        <div class="form-group">
-                                                                            <label>Company Name *</label> 
-                                                                            <input class="form-control" type="password" name="name" placeholder="" disabled="disabled"> 
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    
+                                                    <div class="col-12 col-xs-12 col-md-6">
+                                                        <label for="motivo">Método de pago *</label>
+                                                        <select id="motivo" name="carlist" form="carform" class="form-control">
+                                                          <option value="">Seleccionar...</option>
+                                                          <option value="compraOnline">Pago con tarjeta</option>
+                                                          <option value="compraFisica">Pago en efectivo</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="list-content">
-                                                        <a href="#listthree" data-toggle="collapse" aria-expanded="false" aria-controls="listthree">Collapse 3 <i class="fa fa-chevron-down"></i></a>
-                                                        <div class="collapse" id="listthree">
-                                                            <div class="list-box">
-                                                                <div class="row">
-                                                                    
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>Name *</label> 
-                                                                            <input class="form-control" type="text" name="name" placeholder=""> 
-                                                                        </div>
-                                                                    </div>
-                                                                    
-                                                                    
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label>Number *</label> 
-                                                                            <input class="form-control" type="text" name="name" placeholder=""> 
-                                                                        </div>
-                                                                    </div>
-                                                                    
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="col-12 col-xs-12 col-md-6">
+
                                                     </div>
+                                                    
+                                                    <div class="col-12 col-xs-12 col-md-12">
+                                                     <hr/>
+                                                            <label>Comentarios</label> 
+                                                            <textarea placeholder="Envíe sus comentarios..." class="form-control" rows="3"></textarea>
+                                                        </div>
                                                 </div>
+
+
                                                 
                                                 <hr/>
 
@@ -5917,8 +5827,9 @@ Cheque ______      Transferencia_____x___
                                             <div class="tab-pane" role="tabpanel" id="step4">
                                                 <h4 class="text-center">Paso 4</h4>
                                                
-                                                <p class="text-center">@GRACIAS<br/>
-                                                Nos pondremos en contacto...</p>
+                                                <br/>
+                                                <h5 class="text-center text-primary">@GRACIAS</h5>
+                                                <p class="text-center">Nos pondremos en contacto...</p>
 
                                     
                                             </div>

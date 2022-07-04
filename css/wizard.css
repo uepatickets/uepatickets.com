@@ -47,7 +47,7 @@
 
     .connecting-line {
         height: 2px;
-        background: #e0e0e0;
+        background: #ef4223;
         position: absolute;
         width: 75%;
         margin: 0 auto;
@@ -63,9 +63,9 @@
         border-bottom-color: transparent;
     }
     span.round-tab {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
+        width: 39px;
+        height: 39px;
+        line-height: 32px;
         display: inline-block;
         border-radius: 50%;
         background: #fff;
@@ -76,7 +76,7 @@
         font-size: 16px;
         color: #0e214b;
         font-weight: 500;
-        border: 1px solid #ddd;
+        border: 3px solid #ef4223;
     }
     span.round-tab i{
         color:#555555;
