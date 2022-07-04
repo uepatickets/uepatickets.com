@@ -1,0 +1,238 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body style="background:#eee;font-family: Arial;font-size: 12px;">
+    <div style="background:#fff;margin:3px auto;max-width:640px;width:100%;padding:9px;border-radius: 9px;">
+
+        <div style="text-align: center;">
+            <a href="https://uepatickets.com/?ficha">
+                <img style="width:90px;" src="https://uepatickets.com/images/uepa_tickets.png">
+            </a>
+            <h3 style="color: #000000;">Ficha de Inscripción Evento</h3>
+        </div>
+
+        <h4>Datos de Evento</h4>
+        <div>
+            <table class="table table-bordered">
+                <thead style="background-color:#ef4123; color: white;">
+                    <tr>
+                        <th style="padding: 3px 9px;" scope="col">Nombre Evento</th>
+                        <th style="padding: 3px 9px;" scope="col">Lugar del Evento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{nombreEvento}}</td>
+                        <td>{{lugarEvento}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered">
+                <thead style="background-color:#ef4123; color: white;">
+                    <tr>
+                        <th style="padding: 3px 9px;" scope="col">Tipo de Evento</th>
+                        {{capacidadTotalaVentaTitulo}}
+                        <th style="padding: 3px 9px;" scope="col">Fecha del Evento</th>
+                        <th style="padding: 3px 9px;" scope="col">Hora del Evento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{tipoEvento}}</td>
+                        {{capacidadTotalaVenta}}
+                        <td>{{fechaEvento}}</td>
+                        <td>{{horaEvento}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Datos de Contacto</h4>
+        <div>
+            <table class="table table-bordered">
+                <thead style="background-color:#ef4123; color: white;">
+                    <tr>
+                        <th style="padding: 3px 9px;" scope="col">Nombre</th>
+                        <th style="padding: 3px 9px;" scope="col">Apellido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{PersonaContactoNombre}}</td>
+                        <td>{{PersonaContactoApellido}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered">
+                <thead style="background-color:#ef4123; color: white;">
+                    <tr>
+                        <th style="padding: 3px 9px;" scope="col">Nombre</th>
+                        <th style="padding: 3px 9px;" scope="col">Apellido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{inputCelular}}</td>
+                        <td>{{inputCorreo}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- ******************* -->
+            <br />
+
+            {{PersonaJuridica}}
+
+            <br />
+
+            {{PersonaFisica}}
+
+        </div>
+
+        <h4>Tipos de taquillas</h4>
+        <div>
+            <table class="table table-bordered">
+                <thead style="background-color:#ef4123; color: white;">
+                    <tr>
+                        <th style="padding: 3px 9px;" scope="col">#</th>
+                        <th style="padding: 3px 9px;" scope="col">Sección</th>
+                        <th style="padding: 3px 9px;" scope="col">Precio por ticket</th>
+                        <th style="padding: 3px 9px;" scope="col">Cantidad por sección</th>
+                        <th style="padding: 3px 9px;" scope="col">Condición</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>{{Seccion1}}</td>
+                        <td>{{PT1}}</td>
+                        <td>{{CS1}}</td>
+                        <td>{{Condicion1}}</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>{{Seccion2}}</td>
+                        <td>{{PT2}}</td>
+                        <td>{{CS2}}</td>
+                        <td>{{Condicion2}}</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>{{Seccion3}}</td>
+                        <td>{{PT3}}</td>
+                        <td>{{CS3}}</td>
+                        <td>{{Condicion3}}</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>{{Seccion4}}</td>
+                        <td>{{PT4}}</td>
+                        <td>{{CS4}}</td>
+                        <td>{{Condicion4}}</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>{{Seccion5}}</td>
+                        <td>{{PT5}}</td>
+                        <td>{{CS5}}</td>
+                        <td>{{Condicion5}}</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>{{Seccion6}}</td>
+                        <td>{{PT6}}</td>
+                        <td>{{CS6}}</td>
+                        <td>{{Condicion6}}</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>{{Seccion7}}</td>
+                        <td>{{PT7}}</td>
+                        <td>{{CS7}}</td>
+                        <td>{{Condicion7}}</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>{{Seccion8}}</td>
+                        <td>{{PT8}}</td>
+                        <td>{{CS8}}</td>
+                        <td>{{Condicion8}}</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>{{Seccion9}}</td>
+                        <td>{{PT9}}</td>
+                        <td>{{CS9}}</td>
+                        <td>{{Condicion9}}</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>{{Seccion10}}</td>
+                        <td>{{PT10}}</td>
+                        <td>{{CS10}}</td>
+                        <td>{{Condicion10}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+        
+
+        {{datoscheque}}
+
+        <br />
+
+        {{datosTransferenciaBancaria}}
+
+        <div>
+            <table class="table table-bordered">
+                <thead style="background-color:#ef4123; color: white;">
+                    <tr>
+                        <th style="padding: 3px 9px;" scope="col">¿Evento a la venta sólo en línea con e-ticket?</th>
+                        <th style="padding: 3px 9px;" scope="col">
+                            ¿Evento a la venta en línea y demás puntos con ticket
+                            físico?
+                        </th>
+                        <th style="padding: 3px 9px;" scope="col">¿Habrá algún tipo de descuento?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{EventoSoloOnline}}</td>
+                        <td>{{EventoSoloTicketsFisicos}}</td>
+                        <td>{{EventoDescuento}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <table class="table table-bordered">
+                <thead style="background-color:#ef4123; color: white;">
+                    <tr>
+                        <th style="padding: 3px 9px;" scope="col">Comentario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{inputComentario}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br/>
+        <hr/>
+        <div style="text-align: center;">
+            <h3>INFO: +1 (809) 620-8372</h3>
+            <p>Av. Núñez de Cáceres #11, Edif. Equinox, 1er. Nivel, <br/>Santo Domingo, República Dominicana.</p>
+        </div>
+
+    </div><!--container-->
+  
+</body>
+</html>
