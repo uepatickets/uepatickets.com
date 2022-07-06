@@ -5653,6 +5653,12 @@ Cheque ______      Transferencia_____x___
                                         <hr/>
                                     </div>
                     
+                                    <style>
+                                        .btn-contacto{
+                                            border: 2px solid #ef4223 !important;
+                                            color: #ef4223;
+                                            font-weight: bold;}
+                                    </style>
                                     <div class="login-box">
                                         <div class="tab-content" id="main_form">
                                             <div class="tab-pane text-center active" role="tabpanel" id="step1">
@@ -5661,22 +5667,22 @@ Cheque ______      Transferencia_____x___
                                                 
                                                 <div class="row">
                                                     <div class="col-16 col-xs-6 col-md-6">
-                                                        <button class="btn btn-default btn-block mb-3 p-5 next-step" type="button" id="reembolsos" value="reembolsos">
+                                                        <button class="btn btn-default btn-block mb-3 p-5 btn-contacto next-step" type="button" id="reembolsos" value="reembolsos">
                                                             Crédito / Reembolso
                                                         </button>
                                                     </div>
                                                     <div class="col-16 col-xs-6 col-md-6">
-                                                        <button class="btn btn-default btn-block mb-3 p-5 next-step000 disabled" type="button" id="reenviarTickets" value="reenviarTickets">
+                                                        <button class="btn btn-default btn-block mb-3 p-5 btn-contacto next-step000 disabled" type="button" id="reenviarTickets" value="reenviarTickets">
                                                             Reenviar tickets
                                                         </button>
                                                     </div>
                                                     <div class="col-16 col-xs-6 col-md-6">
-                                                        <button class="btn btn-default btn-block mb-3 p-5 next-step000 disabled" type="button" id="cambiarAsientos" value="cambiarAsientos">
+                                                        <button class="btn btn-default btn-block mb-3 p-5 btn-contacto next-step000 disabled" type="button" id="cambiarAsientos" value="cambiarAsientos">
                                                             Cambiar asientos
                                                         </button>
                                                     </div>
                                                     <div class="col-16 col-xs-6 col-md-6">
-                                                        <button class="btn btn-default btn-block mb-3 p-5 next-step000 disabled"  type="button" id="chatear" value="chatear">
+                                                        <button class="btn btn-default btn-block mb-3 p-5 btn-contacto next-step000 disabled"  type="button" id="chatear" value="chatear">
                                                             Chatear
                                                         </button>
                                                     </div>
@@ -5791,7 +5797,7 @@ Cheque ______      Transferencia_____x___
 
                                                 <ul class="list-inline pull-right">
                                                     <li><button type="button" class="btn btn-default prev-step">Volver</button></li>
-                                                    <li><button type="button" class="btn btn-warning next-step skip-btn">Omitir</button></li>
+                                                   <!-- <li><button type="button" class="btn btn-warning next-step skip-btn">Omitir</button></li>-->
                                                     <li><button type="button" class="btn btn-primary next-step">Continuar</button></li>
                                                 </ul>
 
@@ -5819,26 +5825,74 @@ Cheque ______      Transferencia_____x___
                                                     </div>
                                                     
                                                     <div class="col-12 col-xs-12 col-md-4">
+                                                       
                                                         <label for="motivo">Método de pago *</label>
-                                                        <select id="motivo" name="carlist" form="carform" class="form-control">
+                                                        <div class="btn-group" data-toggle="buttons">
+                                                            <label class="btn btn-default" onclick="functionTarjeta()">
+                                                              <input type="radio" name="options" id="option1" > Pago con Tarjeta
+                                                            </label>
+                                                            <label class="btn btn-default" onclick="functionEfectivo()">
+                                                              <input type="radio" name="options" id="option2" > Efectivo
+                                                            </label>
+                                                          </div>
+
+                                                       <!-- <div class="btn-group">
+                                                            <button onclick="functionTarjeta()" class="btn btn-default">Pago con Tarjeta</button>
+                                                            <button onclick="functionEfectivo()" class="btn btn-default">Efectivo</button>
+                                                        </div>
+                                                         <select id="motivo" name="carlist" form="carform" class="form-control">
+                                                            <option value="">Seleccionar...</option>
+                                                            <option onclick="functionTarjeta()" value="compraOnline">Pago con tarjeta</option>
+                                                            <option value="compraFisica">Pago en efectivo</option>
+                                                            </select>-->  
+                                                    </div>
+                                                    <div id="compraOnlineInput" class="hidden">
+                                                        <div class="col-12 col-xs-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label>Últimos 4 digitos tarjeta</label> 
+                                                                <input class="form-control" type="text" name="name" placeholder="####"> 
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-xs-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label>Cédula / Pasaporte</label> 
+                                                                <input class="form-control" type="text" name="name" placeholder="Cédula / Pasaporte"> 
+                                                            </div>
+                                                        </div>
+                                                    </div><!--compraOnlineInput-->
+                                                    <div id="compraFisicoInput" class="hidden">
+                                                        <div class="col-12 col-xs-12 col-md-4">
+                                                            <label for="tipoCuenta">Tipo de cuenta *</label>
+                                                        <select id="tipoCuenta" name="list" form="form" class="form-control">
                                                           <option value="">Seleccionar...</option>
-                                                          <option value="compraOnline">Pago con tarjeta</option>
-                                                          <option value="compraFisica">Pago en efectivo</option>
+                                                          <option value="cuentaCorriente">Cuenta Corriente</option>
+                                                          <option value="cuentaAhorros">Cuenta de Ahorros</option>
                                                         </select>
-                                                    </div>
-                                                    <div class="col-12 col-xs-12 col-md-4">
-                                                        <div class="form-group">
-                                                            <label>Últimos 4 digitos tarjeta</label> 
-                                                            <input class="form-control" type="text" name="name" placeholder="####"> 
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12 col-xs-12 col-md-4">
-                                                        <div class="form-group">
-                                                            <label>Cédula / Pasaporte</label> 
-                                                            <input class="form-control" type="text" name="name" placeholder="Cédula / Pasaporte"> 
+                                                        <div class="col-12 col-xs-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label>Número de cuenta</label> 
+                                                                <input class="form-control" type="text" name="name" placeholder="#########"> 
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    
+                                                    </div><!--compraOnlineInput-->
+                                                    <script>
+                                                        function functionTarjeta() {
+                                                          var element = document.getElementById("compraOnlineInput");
+                                                          element.classList.remove("hidden");
+
+                                                          var element = document.getElementById("compraFisicoInput");
+                                                          element.classList.add("hidden");
+                                                        };
+                                                        function functionEfectivo() {
+                                                          var element = document.getElementById("compraOnlineInput");
+                                                          element.classList.add("hidden");
+
+                                                          var element = document.getElementById("compraFisicoInput");
+                                                          element.classList.remove("hidden");
+                                                        }
+                                                    </script>
+
                                                     <div class="col-12 col-xs-12 col-md-12">
                                                      <hr/>
                                                             <label>Comentarios</label> 
@@ -5852,7 +5906,7 @@ Cheque ______      Transferencia_____x___
 
                                                 <ul class="list-inline pull-right">
                                                     <li><button type="button" class="btn btn-default prev-step">Volver</button></li>
-                                                    <li><button type="button" class="btn btn-warning next-step skip-btn">Omitir</button></li>
+                                                   <!--<li><button type="button" class="btn btn-warning next-step skip-btn">Omitir</button></li>--> 
                                                     <li><button type="button" class="btn btn-primary next-step">Continuar</button></li>
                                                 </ul>
                               
