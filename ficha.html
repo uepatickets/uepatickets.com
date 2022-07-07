@@ -5688,26 +5688,6 @@ Cheque ______      Transferencia_____x___
                                                     </div>
 
                                                 </div><!--row-->
-                                                <!--
-                                                        <label for="reembolsos" class="btn btn-default btn-block000 mb-3 p-3">
-                                                            <input type="radio" id="reembolsos" value="Reembolsos">
-                                                            <p>Crédito / Reembolso</p>
-                                                        </label>
-
-                                                        <label for="reenviarTickets" class="disabled btn btn-default btn-block000 mb-3 p-3">
-                                                            <input type="radio" id="reenviarTickets" value="Reenviar tickets">
-                                                            <p>Reenviar tickets</p>
-                                                        </label>
-
-                                                        <label for="cambiarAsientos" class="disabled btn btn-default btn-block000 mb-3 p-3">
-                                                            <input type="radio" id="cambiarAsientos" value="Cambiar asientos">
-                                                            <p>Cambiar asientos</p>
-                                                        </label>
-    
-                                                        <label for="chatear" class="disabled btn btn-default btn-block000 mb-3 p-3" >
-                                                            <input type="radio" id="chatear" value="Chatear">
-                                                            <p>Chatear</p>
-                                                        </label>-->
                                        
                                                 <hr/>
 
@@ -5723,24 +5703,6 @@ Cheque ______      Transferencia_____x___
                                                 <h4 class="text-center">Paso 2</h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
-
-                                                      <!-- <div class="form-group">
-                                                            <label>Motivo *</label> 
-                                                            <div class="dropdown">
-                                                                <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                                Seleccionar motivo <span class="caret"></span>
-                                                                </button>
-                                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                                                <li><a href="#">Cancelación de evento</a></li>
-                                                                <li><a href="#">Posposición de evento</a></li>
-                                                                <li><a href="#">Modificación de evento</a></li>
-                                                                <li><a href="#">Doble cargo</a></li>
-                                                                <li role="separator" class="divider"></li>
-                                                                <li><a href="#">Inconveniente con la compra</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>--> 
-
                                                         <label for="motivo">Motivo *</label>
                                                         <select id="motivo" name="carlist" form="carform" class="form-control">
                                                           <option value="">Seleccionar motivo...</option>
@@ -5782,15 +5744,6 @@ Cheque ______      Transferencia_____x___
                                                             <input class="form-control" type="text" name="name" placeholder="Correo"> 
                                                         </div>
                                                     </div>
-                                                <!--   <div class="col-12 col-xs-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label>Adjuntar</label> 
-                                                            <div class="custom-file">
-                                                            <input type="file" class="custom-file-input" id="customFile">
-                                                            <label class="custom-file-label" for="customFile">Seleccionar archivo</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>--> 
                                                 </div>
 
                                                 <hr/>
@@ -5807,15 +5760,24 @@ Cheque ______      Transferencia_____x___
                                                 <h4 class="text-center">Paso 3</h4>
                                                 <div class="row">
                                                     <div class="col-12 col-xs-12 col-md-6">
-                                                        <label for="motivo">Tipo de compra *</label>
+                                                        <label for="tipoCompra">Tipo de compra *</label>
+                                                        <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                                            <label class="btn btn-default" onclick="compraOnlineF()">
+                                                              <input type="radio" name="options" id="" > Compra online
+                                                            </label>
+                                                            <label class="btn btn-default" onclick="compraFisicaF()">
+                                                              <input type="radio" name="options" id="" > Compra física
+                                                            </label>
+                                                          </div>
+                                               <!--      <label for="motivo">Tipo de compra *</label>
                                                         <select id="motivo" name="carlist" form="carform" class="form-control">
                                                           <option value="">Seleccionar...</option>
                                                           <option value="compraOnline">Compra online</option>
                                                           <option value="compraFisica">Compra física</option>
-                                                        </select>
+                                                        </select>-->   
                                                     </div>
                                                     <div class="col-12 col-xs-12 col-md-6">
-                                                        <div class="form-group">
+                                                        <div class="form-group hidden" id="compraFisicaInput">
                                                             <label>Adjuntar foto de tickets</label> 
                                                             <div class="custom-file">
                                                             <input type="file" class="custom-file-input" id="customFile">
@@ -5823,28 +5785,38 @@ Cheque ______      Transferencia_____x___
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
+                                                    <script>
+                                                        function compraFisicaF() {
+                                                          var element = document.getElementById("compraFisicaInput");
+                                                          element.classList.remove("hidden");
+
+                                                          var element = document.getElementById("compraOnlineInput");
+                                                          element.classList.add("hidden");
+                                                        };
+                                                        function compraOnlineF() {
+                                                          var element = document.getElementById("compraFisicaInput");
+                                                          element.classList.add("hidden");
+
+                                                          var element = document.getElementById("compraOnlineInput");
+                                                          element.classList.remove("hidden");
+                                                          var element = document.getElementById("compraOnline");
+                                                          element.classList.add("active");
+                                                        }
+                                                    </script>
+                                                    <div class="col-12 col-md-12">   <hr/></div>
+                                                 
                                                     <div class="col-12 col-xs-12 col-md-4">
                                                        
                                                         <label for="motivo">Método de pago *</label>
-                                                        <div class="btn-group" data-toggle="buttons">
-                                                            <label class="btn btn-default" onclick="functionTarjeta()">
-                                                              <input type="radio" name="options" id="option1" > Pago con Tarjeta
+                                                        <div class="btn-group btn-group-justified000" data-toggle="buttons">
+                                                            <label class="btn btn-default" id="compraOnline" onclick="functionTarjeta()">
+                                                              <input type="radio" name="options"  > Pago con Tarjeta
                                                             </label>
-                                                            <label class="btn btn-default" onclick="functionEfectivo()">
-                                                              <input type="radio" name="options" id="option2" > Efectivo
+                                                            <label class="btn btn-default" id="compraFisico" onclick="functionEfectivo()">
+                                                              <input type="radio" name="options" id="" > Efectivo
                                                             </label>
                                                           </div>
 
-                                                       <!-- <div class="btn-group">
-                                                            <button onclick="functionTarjeta()" class="btn btn-default">Pago con Tarjeta</button>
-                                                            <button onclick="functionEfectivo()" class="btn btn-default">Efectivo</button>
-                                                        </div>
-                                                         <select id="motivo" name="carlist" form="carform" class="form-control">
-                                                            <option value="">Seleccionar...</option>
-                                                            <option onclick="functionTarjeta()" value="compraOnline">Pago con tarjeta</option>
-                                                            <option value="compraFisica">Pago en efectivo</option>
-                                                            </select>-->  
                                                     </div>
                                                     <div id="compraOnlineInput" class="hidden">
                                                         <div class="col-12 col-xs-12 col-md-4">
@@ -5877,6 +5849,23 @@ Cheque ______      Transferencia_____x___
                                                         </div>
                                                     </div><!--compraOnlineInput-->
                                                     <script>
+                                                        function compraOnlineF() {
+                                                          var element = document.getElementById("compraFisico");
+                                                          element.classList.add("hidden");
+                                                          var element = document.getElementById("compraOnline");
+                                                          element.classList.remove("hidden");
+                                                          var element = document.getElementById("compraFisicaInput");
+                                                          element.classList.add("hidden");
+                                                        };
+                                                        function compraFisicaF() {
+                                                          var element = document.getElementById("compraOnline");
+                                                          element.classList.remove("hidden");
+                                                          var element = document.getElementById("compraFisico");
+                                                          element.classList.remove("hidden");
+                                                          var element = document.getElementById("compraFisicaInput");
+                                                          element.classList.remove("hidden");
+                                                        };
+
                                                         function functionTarjeta() {
                                                           var element = document.getElementById("compraOnlineInput");
                                                           element.classList.remove("hidden");
@@ -5911,14 +5900,24 @@ Cheque ______      Transferencia_____x___
                                                 </ul>
                               
                                             </div>
-                                            <div class="tab-pane" role="tabpanel" id="step4">
+                                            <div class="tab-pane text-center" role="tabpanel" id="step4">
                                                 <h4 class="text-center">Paso 4</h4>
                                                
                                                 <br/>
-                                                <h5 class="text-center text-primary">@GRACIAS</h5>
-                                                <p class="text-center">Nos pondremos en contacto...</p>
+                                                <h3 class="text-center text-primary">¡Solicitud Recibida!</h3>
+                                                <p class="">Hemos recibido tu solicitud, en un periodo de 72 horas laborables nos pondremos en contacto contigo vía correo.</p>
 
-                                    
+                                                <p>Numero de reclamación o Numero de caso: <br/><b>#1257856</b></p>
+
+                                    <hr/>
+
+                                    Si no aplica: 
+
+                                    <h3 class="text-center text-primary">¡Solicitud Rechazada!</h3>
+                                    <p class="">Estimado usuario, el evento que ha seleccionado para su solicitud no aplica para la reclamación requerida.</p>
+
+
+
                                             </div>
 
                             
