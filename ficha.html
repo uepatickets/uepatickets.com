@@ -631,8 +631,8 @@ input:checked + .slider:before {
             width:63px;
             height:63px;
             position: fixed;
-            bottom: 9px;
-            right: 9px;
+            bottom: 16px;
+            right: 90px;
             z-index: 999;
             box-shadow: 0 9px 21px 0 rgba(0,0,0,.5);
             animation: contacto-uepa 2s infinite;
@@ -5979,6 +5979,19 @@ Cheque ______      Transferencia_____x___
             </div>
         </div>
     <!-- Modal Contacto END -->
+
+
+    <!-- CHAT FRESHDESK -->
+    <script>
+        function initFreshChat() {
+          window.fcWidget.init({
+            token: "c017731c-2153-4c5b-9154-9d6fafc19d94",
+            host: "https://wchat.freshchat.com"
+          });
+        }
+        function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"Freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+      </script>
+
 
 
 </body>
